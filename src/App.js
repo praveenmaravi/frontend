@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // Updated for React Router v6
 import { useDispatch } from 'react-redux';
 import { ProtectedRoute } from './router/guards/ProtectedRoute';  // Route guard
 import { ErrorBoundary } from './components/utils/ErrorBoundary'; // Error boundary
 import Layout from './components/layout/Layout'; // Layout component
 
-// Importing Views
+// Importing Views (Updated for proper structure and file names)
 import DashboardHome from './views/Dashboard/DashboardHome';
 import ChatbotInterface from './views/ChatbotInterface';
-import Onboarding from './views/Onboarding';
+import { FeatureTutorial, IndustrySelection, OnboardingComplete, OnboardingSteps, PreferencesSetup } from './views/Onboarding';  // Import individual components if needed
 import Settings from './views/Settings';
 import Analytics from './views/Analytics';
 import Marketplace from './views/Marketplace';
@@ -33,16 +33,24 @@ const App = () => {
       <Router>
         <Layout>
           <ErrorBoundary>
-            <Switch>
-              <ProtectedRoute exact path="/" component={DashboardHome} />
-              <ProtectedRoute path="/chatbot" component={ChatbotInterface} />
-              <Route path="/onboarding" component={Onboarding} />
-              <Route path="/settings" component={Settings} />
-              <Route path="/analytics" component={Analytics} />
-              <Route path="/marketplace" component={Marketplace} />
-              <Route path="/error" component={ErrorPage} />
-              <Route path="/auth" component={Authentication} />
-            </Switch>
+            <Routes>
+              {/* Protected Routes */}
+              <ProtectedRoute path="/" element={<DashboardHome />} />
+              <ProtectedRoute path="/chatbot" element={<ChatbotInterface />} />
+
+              {/* Regular Routes */}
+              <Route path="/onboarding" element={<FeatureTutorial />} />  {/* Example for the first step */}
+              <Route path="/onboarding/industry-selection" element={<IndustrySelection />} />
+              <Route path="/onboarding/complete" element={<OnboardingComplete />} />
+              <Route path="/onboarding/steps" element={<OnboardingSteps />} />
+              <Route path="/onboarding/preferences" element={<PreferencesSetup />} />
+
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/error" element={<ErrorPage />} />
+              <Route path="/auth" element={<Authentication />} />
+            </Routes>
           </ErrorBoundary>
         </Layout>
       </Router>
