@@ -8,9 +8,8 @@ import Layout from './components/layout/Layout'; // Layout component
 // Importing Views (Updated for proper structure and file names)
 import DashboardHome from './views/Dashboard/DashboardHome';
 import ChatbotInterface from './views/ChatbotInterface';
-import Onboarding from './views/Onboarding/Onboarding';  // Import individual components if needed
 import Settings from './views/Settings';
-import AnalyticsPage from './views/Analytics/AnalyticsPage';  // Updated for correct page
+import AnalyticsPage from './views/Analytics/AnalyticsPage'; // Updated Analytics import
 import Marketplace from './views/Marketplace';
 import ErrorPage from './views/ErrorPage/ErrorPage';
 import Authentication from './views/Auth/Authentication';
@@ -20,7 +19,6 @@ import { loadUserData } from './store/actions/userActions';
 
 // Importing Global Styles
 import './assets/styles/base/_global.scss';
-
 
 const App = () => {
   const dispatch = useDispatch();
@@ -40,14 +38,8 @@ const App = () => {
               <ProtectedRoute path="/chatbot" element={<ChatbotInterface />} />
 
               {/* Regular Routes */}
-              <Route path="/onboarding" element={<FeatureTutorial />} />  {/* Example for the first step */}
-              <Route path="/onboarding/industry-selection" element={<IndustrySelection />} />
-              <Route path="/onboarding/complete" element={<OnboardingComplete />} />
-              <Route path="/onboarding/steps" element={<OnboardingSteps />} />
-              <Route path="/onboarding/preferences" element={<PreferencesSetup />} />
-
               <Route path="/settings" element={<Settings />} />
-              <Route path="/analytics" element={<AnalyticsPage />} />  {/* Updated Analytics Route */}
+              <Route path="/analytics" element={<AnalyticsPage />} />  {/* Updated route */}
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/error" element={<ErrorPage />} />
               <Route path="/auth" element={<Authentication />} />
