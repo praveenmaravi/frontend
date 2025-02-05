@@ -1,0 +1,244 @@
+/* Global Styling for the Chatbot Interface */
+
+/* Basic Layout */
+#chatbot-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 100%;
+  background-color: #f7f7f7;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+/* Chat Window Styling */
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column-reverse; /* Chat window messages are at the bottom */
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Message Styling */
+.message {
+  display: flex;
+  margin: 10px 0;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.bot {
+  justify-content: flex-start;
+}
+
+.message .message-content {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  background-color: #e3e3e3;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.message.user .message-content {
+  background-color: #007bff;
+  color: white;
+}
+
+.message.bot .message-content {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Chat Input Styling */
+.chat-input-container {
+  display: flex;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+}
+
+.message-input:focus {
+  border-color: #007bff;
+}
+
+.send-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+/* Quick Reply Buttons */
+.quick-reply-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.quick-reply-button {
+  background-color: #f0f0f0;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.quick-reply-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Emotion Analysis Styling */
+.emotion-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.emotion-icon {
+  font-size: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.emotion-icon.happy {
+  color: #ffcc00;
+}
+
+.emotion-icon.sad {
+  color: #0066cc;
+}
+
+.emotion-icon.angry {
+  color: #ff3333;
+}
+
+.emotion-icon.neutral {
+  color: #888;
+}
+
+.emotion-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Chatbot Avatar Styling */
+.chatbot-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+/* Loader Styling */
+.chat-loader {
+  width: 30px;
+  height: 30px;
+  border: 4px solid #f0f0f0;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Notification Banner Styling */
+.notification-banner {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  font-size: 16px;
+  display: none; /* Default hidden, shown dynamically */
+}
+
+.notification-banner.success {
+  background-color: #28a745;
+}
+
+.notification-banner.error {
+  background-color: #dc3545;
+}
+
+/* Chat Header Styling */
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 10px;
+}
+
+.chat-header .user-info {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.chat-header .chatbot-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .chat-window {
+    padding: 15px;
+  }
+
+  .chat-input-container {
+    padding: 10px;
+  }
+
+  .message-input {
+    font-size: 14px;
+  }
+
+  .send-button {
+    padding: 8px 10px;
+  }
+
+  .quick-reply-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
