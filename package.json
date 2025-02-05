@@ -40,7 +40,12 @@
     "eslint-config-prettier": "^8.3.0",
     "prettier": "^2.8.8",
     "husky": "^8.0.0",
-    "lint-staged": "^13.2.1"
+    "lint-staged": "^13.2.1",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.0",
+    "@babel/plugin-proposal-decorators": "^7.21.0"
+  },
+  "babel": {
+    "plugins": [["@babel/plugin-proposal-decorators", { "legacy": true }]]
   },
   "eslintConfig": {
     "extends": ["react-app", "react-app/jest"]
