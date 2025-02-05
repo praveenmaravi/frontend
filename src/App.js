@@ -8,7 +8,7 @@ import Layout from './components/layout/Layout'; // Layout component
 // Importing Views (Updated for proper structure and file names)
 import DashboardHome from './views/Dashboard/DashboardHome';
 import ChatbotInterface from './views/ChatbotInterface/ChatbotInterface';
-import Settings from './views/Settings';
+import SettingsPage from './views/settings/SettingsPage';  // Import the SettingsPage
 import AnalyticsPage from './views/analytics/AnalyticsPage'; // Updated Analytics import
 import MarketplacePage from './views/Marketplace/MarketplacePage'; // Correct Marketplace import
 import ErrorPage from './views/ErrorPage/ErrorPage';
@@ -38,7 +38,7 @@ const App = () => {
               <ProtectedRoute path="/chatbot" element={<ChatbotInterface />} />
 
               {/* Regular Routes */}
-              <Route path="/settings" element={<Settings />} />
+              <Route path="/settings" element={<SettingsPage />} />  {/* Settings page route */}
               <Route path="/analytics" element={<AnalyticsPage />} />  {/* Updated route */}
               <Route path="/marketplace" element={<MarketplacePage />} />  {/* Corrected route */}
               <Route path="/error" element={<ErrorPage />} />
