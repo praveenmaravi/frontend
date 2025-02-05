@@ -6,7 +6,7 @@ import { ErrorBoundary } from './components/utils/ErrorBoundary'; // Error bound
 import Layout from './components/layout/Layout'; // Layout component
 
 // Importing Views (Updated for proper structure and file names)
-import DashboardHome from './views/Dashboard/DashboardHome';
+import Dashboard from './views/Dashboard/Dashboard';  // Corrected import for Dashboard
 import ChatbotInterface from './views/ChatbotInterface/ChatbotInterface';
 import SettingsPage from './views/settings/SettingsPage';  // Import the SettingsPage
 import AnalyticsPage from './views/analytics/AnalyticsPage'; // Updated Analytics import
@@ -34,7 +34,7 @@ const App = () => {
           <ErrorBoundary>
             <Routes>
               {/* Protected Routes */}
-              <ProtectedRoute path="/" element={<DashboardHome />} />
+              <ProtectedRoute path="/" element={<Dashboard />} />  {/* Corrected to use Dashboard */}
               <ProtectedRoute path="/chatbot" element={<ChatbotInterface />} />
 
               {/* Regular Routes */}
