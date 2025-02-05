@@ -14,7 +14,7 @@ const STATIC_FILES = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('Opened cache');
+      console.log('Opened static files cache');
       return cache.addAll(STATIC_FILES);
     })
   );
@@ -69,7 +69,6 @@ self.addEventListener('fetch', (event) => {
 self.addEventListener('sync', (event) => {
   if (event.tag === 'sync-requests') {
     event.waitUntil(
-      // Implement retry logic for failed requests
       fetchFailedRequests().then(() => {
         console.log('Retry successful for failed requests.');
       }).catch((err) => {
