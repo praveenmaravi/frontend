@@ -1,0 +1,86 @@
+/* Global styling for EmotionAnalysis section */
+.emotion-analysis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Container for the emotion icon */
+.emotion-analysis__icon {
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Emotion icon: Happy */
+.emotion-analysis__icon--happy {
+  background-color: #ffeb3b; /* Yellow for happy */
+}
+
+/* Emotion icon: Sad */
+.emotion-analysis__icon--sad {
+  background-color: #2196f3; /* Blue for sad */
+}
+
+/* Emotion icon: Angry */
+.emotion-analysis__icon--angry {
+  background-color: #f44336; /* Red for angry */
+}
+
+/* Emotion icon: Neutral */
+.emotion-analysis__icon--neutral {
+  background-color: #9e9e9e; /* Grey for neutral */
+}
+
+/* Hover effect on the emotion icon */
+.emotion-analysis__icon:hover {
+  transform: scale(1.1);
+}
+
+/* Text for emotion description */
+.emotion-analysis__text {
+  font-size: 14px;
+  color: #888;
+  font-weight: 500;
+}
+
+/* Specific styling for each emotion text */
+.emotion-analysis__text--happy {
+  color: #ffeb3b;
+}
+
+.emotion-analysis__text--sad {
+  color: #2196f3;
+}
+
+.emotion-analysis__text--angry {
+  color: #f44336;
+}
+
+.emotion-analysis__text--neutral {
+  color: #9e9e9e;
+}
+
+/* Optional: Animation for when emotion analysis is triggered */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.emotion-analysis__container {
+  animation: fadeIn 0.5s ease-out;
+  display: flex;
+  align-items: center;
+}
