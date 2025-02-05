@@ -12,7 +12,7 @@ import Onboarding from './views/Onboarding';
 import Settings from './views/Settings';
 import Analytics from './views/Analytics';
 import Marketplace from './views/Marketplace';
-import ErrorHandling from './views/ErrorHandling';
+import ErrorPage from './views/ErrorPage/ErrorPage';
 import Authentication from './views/Authentication';
 
 // Importing Store Actions
