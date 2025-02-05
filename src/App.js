@@ -10,7 +10,7 @@ import DashboardHome from './views/Dashboard/DashboardHome';
 import ChatbotInterface from './views/ChatbotInterface/ChatbotInterface';
 import Settings from './views/Settings';
 import AnalyticsPage from './views/analytics/AnalyticsPage'; // Updated Analytics import
-import Marketplace from './views/Marketplace';
+import MarketplacePage from './views/Marketplace/MarketplacePage'; // Correct Marketplace import
 import ErrorPage from './views/ErrorPage/ErrorPage';
 import Authentication from './views/Auth/Authentication';
 
@@ -40,7 +40,7 @@ const App = () => {
               {/* Regular Routes */}
               <Route path="/settings" element={<Settings />} />
               <Route path="/analytics" element={<AnalyticsPage />} />  {/* Updated route */}
-              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/marketplace" element={<MarketplacePage />} />  {/* Corrected route */}
               <Route path="/error" element={<ErrorPage />} />
               <Route path="/auth" element={<Authentication />} />
             </Routes>
