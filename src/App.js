@@ -13,7 +13,7 @@ import Settings from './views/Settings';
 import Analytics from './views/Analytics';
 import Marketplace from './views/Marketplace';
 import ErrorPage from './views/ErrorPage/ErrorPage';
-import Authentication from './views/Authentication';
+import { Login, Signup } from "../views/Auth/Authentication";
 
 // Importing Store Actions
 import { loadUserData } from './store/actions/userActions';
