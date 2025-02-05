@@ -1,0 +1,172 @@
+/* settings.module.css */
+
+/* General Page Layout */
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Container for Each Setting Section */
+.settings-card {
+  background-color: var(--card-bg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title for each card */
+.settings-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* Form Inputs */
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.input-field {
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: var(--input-bg-color);
+  font-size: 1rem;
+  color: var(--text-color);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: var(--primary-color);
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle-switch input {
+  width: 40px;
+  height: 20px;
+  background-color: var(--border-color);
+  border-radius: 9999px;
+  appearance: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-switch input:checked {
+  background-color: var(--primary-color);
+}
+
+.toggle-switch label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Dropdown Menu */
+.select-dropdown {
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: var(--input-bg-color);
+  font-size: 1rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.select-dropdown:focus {
+  border-color: var(--primary-color);
+}
+
+/* Buttons */
+.button-primary {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.button-secondary {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-secondary:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 1rem;
+  }
+
+  .settings-card {
+    padding: 1rem;
+  }
+
+  .settings-form {
+    gap: 0.75rem;
+  }
+
+  .input-field {
+    font-size: 0.875rem;
+  }
+
+  .button-primary,
+  .button-secondary {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Variables */
+:root {
+  --bg-color: #f9f9f9;
+  --card-bg-color: #fff;
+  --primary-color: #4CAF50;
+  --primary-color-dark: #388E3C;
+  --secondary-color: #2196F3;
+  --secondary-color-dark: #1976D2;
+  --text-color: #333;
+  --border-color: #ddd;
+  --input-bg-color: #fafafa;
+}
