@@ -1,1 +1,153 @@
+/* onboarding.module.css */
+
+/* General container for onboarding process */
+.onboarding-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+/* Step Indicator */
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.step-indicator span {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.step-indicator span.active {
+  background-color: #4caf50;
+}
+
+.step-indicator span.completed {
+  background-color: #2196f3;
+}
+
+/* Onboarding Form */
+.onboarding-form {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.onboarding-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.onboarding-form input,
+.onboarding-form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.onboarding-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.onboarding-form button:hover {
+  background-color: #45a049;
+}
+
+/* Industry Selection Dropdown or Modal */
+.industry-selection {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Workflow Preview */
+.workflow-preview {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.workflow-preview h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.workflow-preview .preview-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Success and Error Message */
+.success-message,
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.error-message {
+  color: #f44336;
+}
+
+.success-message img,
+.error-message img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .onboarding-form {
+    padding: 20px;
+  }
+
+  .onboarding-container {
+    padding: 10px;
+  }
+}
 
