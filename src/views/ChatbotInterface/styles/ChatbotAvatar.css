@@ -1,0 +1,47 @@
+/* General styles for the chatbot avatar container */
+.chatbot-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Adjust size as necessary */
+  height: 50px; /* Adjust size as necessary */
+  border-radius: 50%;
+  background-color: #4a90e2; /* Customize avatar background color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Avatar image styling */
+.chatbot-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the avatar container */
+  border-radius: 50%; /* Keeps the avatar round */
+}
+
+/* Optional: If there is a status indicator next to the avatar */
+.chatbot-avatar .status-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px; /* Small circle for the status */
+  height: 10px;
+  border-radius: 50%;
+  background-color: #34d399; /* Green for online status */
+  border: 2px solid white; /* Border around the status indicator */
+}
+
+/* Optional: Hover effect for the avatar */
+.chatbot-avatar:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Optional: If you need to add text below the avatar (e.g., bot name) */
+.chatbot-avatar .avatar-name {
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 5px;
+}
