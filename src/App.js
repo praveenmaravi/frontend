@@ -19,7 +19,7 @@ import Authentication from "views/Auth/Authentication";
 import { loadUserData } from './store/actions/userActions';
 
 // Importing Global Styles
-@import "@/assets/styles/base/_global.scss";
+import "@/assets/styles/base/_global.scss";
 
 
 const App = () => {
