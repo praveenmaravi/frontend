@@ -7,7 +7,7 @@ import Layout from './components/layout/Layout'; // Layout component
 
 // Importing Views (Updated for proper structure and file names)
 import DashboardHome from './views/Dashboard/DashboardHome';
-import ChatbotInterface from './views/ChatbotInterface';
+import ChatbotInterface from './views/ChatbotInterface/ChatbotInterface';
 import Settings from './views/Settings';
 import AnalyticsPage from './views/analytics/AnalyticsPage'; // Updated Analytics import
 import Marketplace from './views/Marketplace';
