@@ -1,0 +1,122 @@
+/* ChatWindow.css */
+
+/* Chat Window */
+.chat-window {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 80vh;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Chat Header */
+.chat-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
+}
+
+.chat-header h3 {
+  margin: 0;
+}
+
+.chat-header .user-info {
+  font-size: 1rem;
+  color: #dfe2e6;
+}
+
+/* Chat Messages */
+.chat-messages {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-message {
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: #e1f5fe;
+  align-self: flex-end;
+}
+
+.bot-message {
+  background-color: #e0e0e0;
+  align-self: flex-start;
+}
+
+/* Message Input */
+.message-input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 2px solid #ddd;
+  background-color: white;
+}
+
+.message-input-wrapper textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  resize: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-input-wrapper button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.message-input-wrapper button:hover {
+  background-color: #388e3c;
+}
+
+/* Loader */
+.chat-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.chat-loader::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid #4CAF50;
+  border-top: 5px solid transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
