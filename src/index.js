@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css'; // Global styles for the app
+import './assets/styles/base/index.scss'; // Global styles for the app
 import App from './App'; // Main app component
 import { BrowserRouter as Router } from 'react-router-dom'; // For handling routing
 import { Provider } from 'react-redux'; // For global state management
