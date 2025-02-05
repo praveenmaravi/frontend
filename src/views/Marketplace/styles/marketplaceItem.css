@@ -1,0 +1,84 @@
+/* styles/marketplaceItem.css */
+
+/* Marketplace Item Card */
+.marketplace-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.marketplace-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Item Image */
+.marketplace-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* Item Title */
+.marketplace-item h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Item Description */
+.marketplace-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Action Button */
+.marketplace-item button {
+  background-color: #4f46e5;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.marketplace-item button:hover {
+  background-color: #4338ca;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .marketplace-item {
+    padding: 12px;
+  }
+
+  .marketplace-item h3 {
+    font-size: 14px;
+  }
+
+  .marketplace-item p {
+    font-size: 12px;
+  }
+
+  .marketplace-item button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
