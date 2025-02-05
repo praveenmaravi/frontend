@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { ProtectedRoute } from './router/guards/ProtectedRoute';  // Route guard
-import { ErrorBoundary } from './components/ErrorBoundary';       // Error boundary
+import { ErrorBoundary } from './components/utils/ErrorBoundary';       // Error boundary
 import Layout from './components/Layout';                         // Layout component
 
 // Importing Views
