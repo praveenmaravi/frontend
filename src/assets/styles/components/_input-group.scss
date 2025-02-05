@@ -1,0 +1,106 @@
+// _input-group.scss
+
+// Variables for input group styles
+$input-group-border-color: #ddd;
+$input-group-focus-border-color: #0056b3;
+$input-group-padding: 10px;
+$input-group-radius: 5px;
+$input-group-text-color: #333;
+$input-group-background-color: #fff;
+$input-group-disabled-bg-color: #f5f5f5;
+$input-group-placeholder-color: #999;
+$input-group-icon-size: 16px;
+
+// Base input group style
+.input-group {
+  display: flex;
+  align-items: center;
+  border-radius: $input-group-radius;
+  border: 1px solid $input-group-border-color;
+  background-color: $input-group-background-color;
+
+  // Input field style
+  .input-group-input {
+    flex: 1;
+    padding: $input-group-padding;
+    font-size: 14px;
+    color: $input-group-text-color;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: $input-group-radius;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: $input-group-focus-border-color;
+    }
+
+    &:disabled {
+      background-color: $input-group-disabled-bg-color;
+      color: #888;
+    }
+
+    &::placeholder {
+      color: $input-group-placeholder-color;
+    }
+  }
+
+  // Icon inside the input group
+  .input-group-icon {
+    padding: $input-group-padding;
+    font-size: $input-group-icon-size;
+    color: $input-group-border-color;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: $input-group-focus-border-color;
+    }
+  }
+
+  // Button inside the input group (e.g., send button in chat)
+  .input-group-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $input-group-padding;
+    background-color: $input-group-focus-border-color;
+    color: white;
+    border: none;
+    border-radius: $input-group-radius;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($input-group-focus-border-color, 10%);
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  // Optional spacing and alignment tweaks
+  &.input-group-vertical {
+    flex-direction: column;
+  }
+
+  &.input-group-inline {
+    flex-direction: row;
+  }
+}
+
+// Additional styles for input groups with icons or buttons
+.input-group.with-icon {
+  .input-group-icon {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.input-group.with-btn {
+  .input-group-btn {
+    margin-left: 10px;
+  }
+}

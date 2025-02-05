@@ -1,0 +1,148 @@
+// _animations.scss
+
+// Fade-in Animation
+@mixin fade-in($duration: 0.3s, $delay: 0s) {
+    animation: fadeIn $duration ease-in-out $delay;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  // Slide-in Animation (from bottom)
+  @mixin slide-in-bottom($duration: 0.5s, $delay: 0s) {
+    animation: slideInBottom $duration ease-in-out $delay;
+  }
+  
+  @keyframes slideInBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  // Scale-up Animation
+  @mixin scale-up($duration: 0.4s, $delay: 0s) {
+    animation: scaleUp $duration ease-in-out $delay;
+  }
+  
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  // Bounce Animation (used for buttons or interactive elements)
+  @mixin bounce($duration: 1s, $delay: 0s) {
+    animation: bounce $duration ease-in-out $delay infinite;
+  }
+  
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  // Shake Animation (used for error or warning messages)
+  @mixin shake($duration: 0.6s, $delay: 0s) {
+    animation: shake $duration ease-in-out $delay;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  // Rotate Animation (used for spinner or loading indicator)
+  @mixin rotate($duration: 1s, $delay: 0s) {
+    animation: rotate $duration linear $delay infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  // Slide-in Animation (from left)
+  @mixin slide-in-left($duration: 0.5s, $delay: 0s) {
+    animation: slideInLeft $duration ease-in-out $delay;
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  // Zoom-in Animation
+  @mixin zoom-in($duration: 0.5s, $delay: 0s) {
+    animation: zoomIn $duration ease-in-out $delay;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  // Hover effects for interactive elements
+  .button {
+    &:hover {
+      @include scale-up(0.3s, 0s); // Scale-up on hover
+    }
+  }
+  
+  // Example Usage:
+  // .element {
+  //   @include fade-in(0.5s, 0.2s);
+  // }
+  
+  // .modal {
+  //   @include slide-in-bottom(0.6s, 0.1s);
+  // }
+  

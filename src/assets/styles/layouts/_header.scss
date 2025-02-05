@@ -1,0 +1,205 @@
+// _header.scss
+
+// Variables for colors, fonts, and spacing
+$primary-color: #4A90E2; // Blue (primary)
+$secondary-color: #50E3C2; // Green (secondary)
+$background-color: #FFFFFF; // White (background)
+$text-color: #333333; // Dark text
+$header-height: 60px;
+$font-family: 'Helvetica Neue', sans-serif;
+
+$border-radius: 5px;
+$transition-duration: 0.3s;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Global reset for the header
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  background-color: $primary-color;
+  color: $background-color;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+  // Box shadow for depth
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  // Responsive design for smaller screens
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  // Logo container
+  .header-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: $background-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      color: $secondary-color;
+      transition: color $transition-duration ease;
+    }
+  }
+
+  // Navigation
+  .nav {
+    display: flex;
+    align-items: center;
+
+    // Navigation links
+    .nav-link {
+      font-size: 16px;
+      color: $background-color;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 5px 10px;
+      border-radius: $border-radius;
+      transition: background-color $transition-duration ease, color $transition-duration ease;
+
+      &:hover {
+        background-color: $secondary-color;
+        color: $text-color;
+      }
+
+      @media (max-width: 768px) {
+        margin: 10px 0;
+      }
+    }
+
+    // User profile or actions (e.g., login/logout)
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+
+      .action-btn {
+        background-color: transparent;
+        border: 2px solid $background-color;
+        color: $background-color;
+        font-size: 14px;
+        padding: 5px 15px;
+        border-radius: $border-radius;
+        cursor: pointer;
+        transition: background-color $transition-duration ease, color $transition-duration ease;
+
+        &:hover {
+          background-color: $secondary-color;
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  // Burger menu for mobile view
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      .burger-bar {
+        width: 30px;
+        height: 4px;
+        background-color: $background-color;
+        margin: 6px 0;
+        transition: all $transition-duration ease;
+      }
+
+      &:hover .burger-bar {
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+  // Mobile menu when burger icon clicked
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+
+    .menu-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background-color: $primary-color;
+
+      .nav-link {
+        font-size: 20px;
+        color: $background-color;
+        margin: 15px 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        color: $background-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // When the menu is active
+  .mobile-menu.active {
+    display: block;
+  }
+}
+
+// For mobile: active state of burger menu
+.burger-menu.active .burger-bar:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
+}
+
+.burger-menu.active .burger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active .burger-bar:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -8px;
+}

@@ -1,0 +1,99 @@
+{
+    "languages": [
+      {
+        "code": "en",
+        "name": "English",
+        "native_name": "English",
+        "is_default": true,
+        "is_supported": true
+      },
+      {
+        "code": "es",
+        "name": "Spanish",
+        "native_name": "Español",
+        "is_default": false,
+        "is_supported": true
+      },
+      {
+        "code": "fr",
+        "name": "French",
+        "native_name": "Français",
+        "is_default": false,
+        "is_supported": true
+      },
+      {
+        "code": "de",
+        "name": "German",
+        "native_name": "Deutsch",
+        "is_default": false,
+        "is_supported": true
+      },
+      {
+        "code": "zh",
+        "name": "Chinese",
+        "native_name": "中文",
+        "is_default": false,
+        "is_supported": true
+      },
+      {
+        "code": "ar",
+        "name": "Arabic",
+        "native_name": "العربية",
+        "is_default": false,
+        "is_supported": true
+      },
+      {
+        "code": "ja",
+        "name": "Japanese",
+        "native_name": "日本語",
+        "is_default": false,
+        "is_supported": true
+      },
+      {
+        "code": "pt",
+        "name": "Portuguese",
+        "native_name": "Português",
+        "is_default": false,
+        "is_supported": true
+      },
+      {
+        "code": "ru",
+        "name": "Russian",
+        "native_name": "Русский",
+        "is_default": false,
+        "is_supported": true
+      },
+      {
+        "code": "hi",
+        "name": "Hindi",
+        "native_name": "हिन्दी",
+        "is_default": false,
+        "is_supported": true
+      },
+      {
+        "code": "it",
+        "name": "Italian",
+        "native_name": "Italiano",
+        "is_default": false,
+        "is_supported": true
+      },
+      {
+        "code": "ko",
+        "name": "Korean",
+        "native_name": "한국어",
+        "is_default": false,
+        "is_supported": true
+      },
+      {
+        "code": "pl",
+        "name": "Polish",
+        "native_name": "Polski",
+        "is_default": false,
+        "is_supported": true
+      }
+    ],
+    "default_language_code": "en",
+    "fallback_language_code": "en",
+    "language_support_enabled": true
+  }
+  

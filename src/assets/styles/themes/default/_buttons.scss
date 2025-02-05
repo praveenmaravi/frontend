@@ -1,0 +1,123 @@
+// Default Button Styles
+// This file contains the button styles used throughout the application.
+
+$primary-color: #3498db; // Primary button color
+$secondary-color: #2ecc71; // Secondary button color
+$danger-color: #e74c3c; // Danger button color
+$neutral-color: #bdc3c7; // Neutral button color
+
+// Button base styles
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  border: none;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+// Primary Button Style
+.button--primary {
+  background-color: $primary-color;
+  color: white;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:active {
+    background-color: darken($primary-color, 15%);
+  }
+}
+
+// Secondary Button Style
+.button--secondary {
+  background-color: $secondary-color;
+  color: white;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+
+  &:active {
+    background-color: darken($secondary-color, 15%);
+  }
+}
+
+// Danger Button Style
+.button--danger {
+  background-color: $danger-color;
+  color: white;
+
+  &:hover {
+    background-color: darken($danger-color, 10%);
+  }
+
+  &:active {
+    background-color: darken($danger-color, 15%);
+  }
+}
+
+// Neutral Button Style
+.button--neutral {
+  background-color: $neutral-color;
+  color: black;
+
+  &:hover {
+    background-color: darken($neutral-color, 10%);
+  }
+
+  &:active {
+    background-color: darken($neutral-color, 15%);
+  }
+}
+
+// Outline Button Style (for secondary actions or non-primary emphasis)
+.button--outline {
+  background-color: transparent;
+  border: 2px solid $primary-color;
+  color: $primary-color;
+
+  &:hover {
+    background-color: rgba($primary-color, 0.1);
+  }
+
+  &:active {
+    background-color: rgba($primary-color, 0.15);
+  }
+}
+
+// Full Width Button
+.button--full-width {
+  width: 100%;
+  padding: 12px 20px;
+}
+
+// Small Button (for compact actions)
+.button--small {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+// Large Button (for prominent actions)
+.button--large {
+  padding: 14px 28px;
+  font-size: 18px;
+}

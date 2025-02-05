@@ -1,0 +1,71 @@
+// _tooltip.scss
+
+$tooltip-background-color: rgba(0, 0, 0, 0.75);  // Tooltip background color
+$tooltip-text-color: #fff;                        // Tooltip text color
+$tooltip-padding: 8px 12px;                       // Padding inside the tooltip
+$tooltip-border-radius: 4px;                      // Border radius for rounded corners
+$tooltip-arrow-size: 6px;                         // Size of the arrow on the tooltip
+$tooltip-transition-time: 0.3s;                    // Transition time for the tooltip appearance
+
+// Tooltip positioning helpers
+$tooltip-offset: 8px;                             // Space between the tooltip and the target element
+
+// Base styles for tooltips
+.tooltip {
+  position: absolute;
+  background-color: $tooltip-background-color;
+  color: $tooltip-text-color;
+  padding: $tooltip-padding;
+  border-radius: $tooltip-border-radius;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $tooltip-transition-time ease, visibility $tooltip-transition-time ease;
+  z-index: 9999;  // Ensures tooltip stays on top of other elements
+}
+
+// Tooltip arrow
+.tooltip::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: $tooltip-arrow-size solid transparent;
+  border-right: $tooltip-arrow-size solid transparent;
+  border-top: $tooltip-arrow-size solid $tooltip-background-color; // Arrow points upwards
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// Positioning options
+.tooltip.top {
+  bottom: calc(100% + $tooltip-offset);
+}
+
+.tooltip.bottom {
+  top: calc(100% + $tooltip-offset);
+}
+
+.tooltip.left {
+  right: calc(100% + $tooltip-offset);
+}
+
+.tooltip.right {
+  left: calc(100% + $tooltip-offset);
+}
+
+// Tooltip visibility and animations
+.tooltip.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+// Additional styles for responsiveness (if needed)
+@media (max-width: 768px) {
+  .tooltip {
+    font-size: 12px;  // Smaller tooltip text on mobile
+    padding: 6px 10px;  // Adjust padding for smaller screens
+  }
+}

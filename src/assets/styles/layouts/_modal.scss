@@ -1,0 +1,116 @@
+// _modal.scss
+
+$modal-bg-color: rgba(0, 0, 0, 0.5);  // Modal background color (overlay)
+$modal-content-bg: #fff;               // Modal content background color
+$modal-header-bg: #f1f1f1;             // Modal header background color
+$modal-border-radius: 8px;             // Border radius for modal and its elements
+$modal-transition-time: 0.3s;          // Transition duration for opening and closing the modal
+
+$modal-header-height: 50px;            // Modal header height
+$modal-footer-height: 60px;            // Modal footer height
+$modal-body-padding: 20px;             // Padding for modal body
+$modal-max-width: 600px;               // Max width for modal content
+$modal-width: 90%;                     // Default modal width
+$modal-close-btn-size: 30px;           // Size for close button in modal
+
+// Modal Overlay (Background behind modal)
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $modal-bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  visibility: hidden; // Hidden by default
+  opacity: 0;
+  transition: opacity $modal-transition-time ease, visibility $modal-transition-time ease;
+}
+
+// Modal Content Box
+.modal-content {
+  position: relative;
+  background-color: $modal-content-bg;
+  border-radius: $modal-border-radius;
+  width: $modal-width;
+  max-width: $modal-max-width;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform $modal-transition-time ease;
+
+  // Header
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $modal-header-bg;
+    height: $modal-header-height;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+
+    .modal-close-btn {
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+      width: $modal-close-btn-size;
+      height: $modal-close-btn-size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        color: #c00;  // Red on hover for close button
+      }
+    }
+  }
+
+  // Body
+  .modal-body {
+    padding: $modal-body-padding;
+    max-height: 400px;  // Limiting max height for large content
+    overflow-y: auto;
+  }
+
+  // Footer (if any actions like buttons)
+  .modal-footer {
+    background-color: $modal-header-bg;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: $modal-footer-height;
+    padding: 0 15px;
+  }
+}
+
+// Show modal overlay and content (visibility and opacity transitions)
+.modal-overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+// Active Modal Content (Transforms the modal into view)
+.modal-content.show {
+  transform: translateY(0);
+}
+
+// Close Modal Button Styles (optional styling for modal footer actions)
+.modal-footer button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+

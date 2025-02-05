@@ -1,0 +1,72 @@
+// _borders.scss
+// Custom border styles for Vision AI application
+
+// Border radius for rounded corners
+$border-radius-small: 4px;
+$border-radius-medium: 8px;
+$border-radius-large: 16px;
+
+// Border widths
+$border-width-thin: 1px;
+$border-width-medium: 2px;
+$border-width-thick: 4px;
+
+// Border colors (can be customized)
+$border-color-light: #e0e0e0;
+$border-color-dark: #333333;
+$border-color-primary: #4A90E2;
+$border-color-success: #4CAF50;
+$border-color-warning: #FF9800;
+$border-color-danger: #F44336;
+
+// Default border style (thin, solid, light gray)
+$border-style-default: solid $border-color-light $border-width-thin;
+
+// Border utilities
+// Default border
+.border-default {
+  border: $border-style-default;
+  border-radius: $border-radius-small;
+}
+
+// Rounded borders
+.border-rounded {
+  border: $border-width-thin solid $border-color-dark;
+  border-radius: $border-radius-medium;
+}
+
+// Thick borders
+.border-thick {
+  border: $border-width-thick solid $border-color-primary;
+  border-radius: $border-radius-large;
+}
+
+// Success border
+.border-success {
+  border: $border-width-medium solid $border-color-success;
+  border-radius: $border-radius-small;
+}
+
+// Warning border
+.border-warning {
+  border: $border-width-medium solid $border-color-warning;
+  border-radius: $border-radius-medium;
+}
+
+// Danger border
+.border-danger {
+  border: $border-width-medium solid $border-color-danger;
+  border-radius: $border-radius-small;
+}
+
+// Custom border with a color, width, and radius
+// Usage: @include custom-border($border-color, $border-width, $border-radius);
+@mixin custom-border($color, $width, $radius) {
+  border: $width solid $color;
+  border-radius: $radius;
+}
+
+// Example of applying a custom border using the mixin
+.custom-border-example {
+  @include custom-border($border-color-primary, $border-width-medium, $border-radius-small);
+}

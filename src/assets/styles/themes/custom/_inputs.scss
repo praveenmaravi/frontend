@@ -1,0 +1,87 @@
+// Input field styles
+// ---------------------------------------------
+
+$input-border-color: #ddd; // Default border color
+$input-focus-border-color: #4e94e6; // Border color on focus
+$input-padding: 12px 15px; // Padding inside input fields
+$input-font-size: 16px; // Font size for input text
+$input-border-radius: 5px; // Rounded corners for input fields
+$input-background-color: #fff; // Background color for inputs
+$input-placeholder-color: #a1a1a1; // Placeholder text color
+
+// General input styles
+.input,
+textarea,
+select {
+  font-size: $input-font-size;
+  padding: $input-padding;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  background-color: $input-background-color;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus {
+    border-color: $input-focus-border-color;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $input-placeholder-color;
+  }
+
+  &.error {
+    border-color: #e74c3c; // Error border color
+    background-color: #f8d7da; // Error background color
+    color: #e74c3c;
+  }
+}
+
+// Input field with success state
+.input.success {
+  border-color: #2ecc71;
+  background-color: #d4edda;
+  color: #2ecc71;
+}
+
+// Textarea specific styling
+textarea {
+  resize: vertical; // Allow vertical resizing
+  min-height: 100px; // Minimum height for textareas
+  line-height: 1.5;
+}
+
+// Input for checkboxes and radio buttons
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 10px; // Spacing for checkboxes and radio buttons
+}
+
+// Custom select dropdown styling
+select {
+  -webkit-appearance: none; // Remove default styling for select elements in WebKit browsers
+  -moz-appearance: none; // Remove default styling for select elements in Firefox
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 5,5 10,0" fill="%23333"/></svg>') no-repeat right 15px center;
+  background-color: $input-background-color;
+  background-size: 10px 10px;
+  padding-right: 30px; // Space for the arrow icon
+}
+
+// Input field for file uploads
+input[type="file"] {
+  padding: 5px 10px;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  background-color: $input-background-color;
+  color: #333;
+}
+
+// Error message styling
+.input-error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+}

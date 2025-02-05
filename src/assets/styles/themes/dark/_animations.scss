@@ -1,0 +1,127 @@
+// _animations.scss
+// Dark Theme Animations
+
+// Fade In Animation
+@mixin fadeIn($duration: 0.5s, $delay: 0s) {
+    animation: fadeIn $duration $delay ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  // Slide In From Left Animation
+  @mixin slideInFromLeft($duration: 0.8s, $delay: 0s) {
+    animation: slideInFromLeft $duration $delay ease-out;
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  // Slide In From Right Animation
+  @mixin slideInFromRight($duration: 0.8s, $delay: 0s) {
+    animation: slideInFromRight $duration $delay ease-out;
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  // Bounce Animation
+  @mixin bounce($duration: 1s, $delay: 0s) {
+    animation: bounce $duration $delay ease-in-out infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  // Fade Out Animation
+  @mixin fadeOut($duration: 0.5s, $delay: 0s) {
+    animation: fadeOut $duration $delay ease-in-out;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  // Pulse Animation (Used for active states or attention-grabbing elements)
+  @mixin pulse($duration: 1.5s, $delay: 0s) {
+    animation: pulse $duration $delay infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  // Dark theme specific background transition for smooth background changes
+  @mixin backgroundTransition($duration: 0.5s) {
+    transition: background-color $duration ease-in-out;
+  }
+  
+  // Applying dark theme base background and text color
+  .dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto', sans-serif;
+  
+    // Apply animation styles to dark theme elements
+    .fade-in {
+      @include fadeIn(0.5s);
+    }
+  
+    .slide-in-left {
+      @include slideInFromLeft(0.8s);
+    }
+  
+    .slide-in-right {
+      @include slideInFromRight(0.8s);
+    }
+  
+    .bounce {
+      @include bounce(1s);
+    }
+  
+    .pulse {
+      @include pulse(1.5s);
+    }
+  }
+  

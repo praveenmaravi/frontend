@@ -1,0 +1,98 @@
+# Python-related ignores
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyproj
+*.venv/
+.env
+env/
+venv/
+*.egg-info/
+pip-log.txt
+
+# Node.js-related ignores
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build and output files
+dist/
+build/
+*.log
+*.out
+*.bak
+*.swp
+coverage/
+*.coverage
+*.cache/
+
+# Docker-related ignores
+docker-compose.override.yml
+.dockerignore
+*.tar
+*.img
+*.container
+
+# Database and migration files
+*.sqlite3
+*.db
+db.sqlite3
+*.sql
+migrations/
+
+# IDE and Editor-specific ignores
+.vscode/
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Deployment and cloud
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/
+.kubernetes/
+*.pem
+*.crt
+*.key
+*.kube/
+.kubectl/
+.secrets
+
+# Temporary files and folders
+tmp/
+temp/
+*.temp
+*.tmp
+*.DS_Store
+
+# Logs and debugging
+logs/
+*.log
+debug.log
+*.pid
+*.lock
+
+# Sensitive data
+.env.local
+.env.test
+.env.development
+.env.production
+.env.staging
+secrets.json
+config.json
+settings.yaml
+
+# Frontend-specific ignores
+/public/assets/
+*.map
+.cache/
+.eslintcache
+
+# Ignore Python bytecode
+*.pyc

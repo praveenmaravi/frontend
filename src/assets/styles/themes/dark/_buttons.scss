@@ -1,0 +1,117 @@
+// Dark theme button styles
+
+$button-bg-color: #333; // Dark background color for buttons
+$button-text-color: #fff; // White text color for visibility
+$button-border-color: #555; // Subtle border color for buttons
+$button-hover-bg-color: #444; // Hover background color
+$button-hover-text-color: #fff; // Text color on hover (keeping it white)
+$button-active-bg-color: #222; // Active state background color
+$button-focus-bg-color: #555; // Focus state background color
+$button-border-radius: 5px; // Button border radius
+$button-padding: 10px 20px; // Padding for buttons
+
+// Button base style
+.button {
+  background-color: $button-bg-color;
+  color: $button-text-color;
+  border: 1px solid $button-border-color;
+  border-radius: $button-border-radius;
+  padding: $button-padding;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $button-hover-bg-color;
+    color: $button-hover-text-color;
+  }
+
+  &:active {
+    background-color: $button-active-bg-color;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $button-focus-bg-color;
+  }
+
+  // Button disabled state
+  &.disabled {
+    background-color: #666;
+    color: #999;
+    border: 1px solid #777;
+    cursor: not-allowed;
+  }
+
+  // Large button style
+  &.large {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+
+  // Small button style
+  &.small {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  // Primary button style (emphasized)
+  &.primary {
+    background-color: #1a73e8; // A deep blue for primary buttons
+    border-color: #1a73e8;
+    &:hover {
+      background-color: #1664c1;
+    }
+  }
+
+  // Secondary button style (outline variant)
+  &.secondary {
+    background-color: transparent;
+    color: $button-text-color;
+    border: 1px solid $button-border-color;
+    &:hover {
+      background-color: #444;
+    }
+  }
+
+  // Danger button style (for warnings or critical actions)
+  &.danger {
+    background-color: #d9534f;
+    border-color: #d9534f;
+    &:hover {
+      background-color: #c9302c;
+    }
+  }
+
+  // Success button style (for success actions)
+  &.success {
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    &:hover {
+      background-color: #4cae4c;
+    }
+  }
+
+  // Info button style (for informational actions)
+  &.info {
+    background-color: #5bc0de;
+    border-color: #5bc0de;
+    &:hover {
+      background-color: #31b0d5;
+    }
+  }
+
+  // Link-style button (no background, just text)
+  &.link {
+    background-color: transparent;
+    color: $button-text-color;
+    border: none;
+    text-decoration: underline;
+    &:hover {
+      background-color: transparent;
+      color: lighten($button-text-color, 15%);
+    }
+  }
+}

@@ -1,0 +1,88 @@
+// _grid.scss
+
+// Base grid variables
+$grid-columns: 12;
+$grid-gutter-width: 30px; // Space between columns
+$grid-gutter-half: $grid-gutter-width / 2;
+
+// Grid container (container for grid layout)
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $grid-gutter-half;
+  padding-right: $grid-gutter-half;
+}
+
+// Grid wrapper for rows
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$grid-gutter-half;
+  margin-right: -$grid-gutter-half;
+}
+
+// Column width (default to 1 column out of 12)
+[class*="col-"] {
+  position: relative;
+  width: 100%;
+  padding-left: $grid-gutter-half;
+  padding-right: $grid-gutter-half;
+}
+
+// Define custom column spans (can be customized for different screen sizes)
+$col-width: 100% / $grid-columns;
+
+// Loop through column definitions for different screen sizes
+@for $i from 1 to $grid-columns {
+  .col-#{$i} {
+    flex: 0 0 #{$col-width * $i};
+    max-width: #{$col-width * $i};
+  }
+}
+
+// Helper classes for responsive grids
+@media (min-width: 576px) {
+  @for $i from 1 to $grid-columns {
+    .col-sm-#{$i} {
+      flex: 0 0 #{$col-width * $i};
+      max-width: #{$col-width * $i};
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  @for $i from 1 to $grid-columns {
+    .col-md-#{$i} {
+      flex: 0 0 #{$col-width * $i};
+      max-width: #{$col-width * $i};
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  @for $i from 1 to $grid-columns {
+    .col-lg-#{$i} {
+      flex: 0 0 #{$col-width * $i};
+      max-width: #{$col-width * $i};
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  @for $i from 1 to $grid-columns {
+    .col-xl-#{$i} {
+      flex: 0 0 #{$col-width * $i};
+      max-width: #{$col-width * $i};
+    }
+  }
+}
+
+// Nested grids (optional)
+.row .col-#{$grid-columns} {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$grid-gutter-half;
+  margin-right: -$grid-gutter-half;
+}

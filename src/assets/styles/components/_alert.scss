@@ -1,0 +1,92 @@
+// _alert.scss
+// Styles for various alert message types
+
+// Base styles for alerts
+$alert-padding: 15px;
+$alert-border-radius: 5px;
+$alert-font-size: 14px;
+$alert-font-weight: 500;
+
+// Color palette
+$alert-success-bg: #d4edda;
+$alert-success-border: #c3e6cb;
+$alert-success-text: #155724;
+
+$alert-warning-bg: #fff3cd;
+$alert-warning-border: #ffeeba;
+$alert-warning-text: #856404;
+
+$alert-error-bg: #f8d7da;
+$alert-error-border: #f5c6cb;
+$alert-error-text: #721c24;
+
+$alert-info-bg: #d1ecf1;
+$alert-info-border: #bee5eb;
+$alert-info-text: #0c5460;
+
+// Mixin for common alert styles
+@mixin alert-style($bg-color, $border-color, $text-color) {
+  padding: $alert-padding;
+  border-radius: $alert-border-radius;
+  font-size: $alert-font-size;
+  font-weight: $alert-font-weight;
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+  color: $text-color;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+  // Icon size and spacing
+  .alert-icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+}
+
+// Success Alert
+.alert-success {
+  @include alert-style($alert-success-bg, $alert-success-border, $alert-success-text);
+}
+
+// Warning Alert
+.alert-warning {
+  @include alert-style($alert-warning-bg, $alert-warning-border, $alert-warning-text);
+}
+
+// Error Alert
+.alert-error {
+  @include alert-style($alert-error-bg, $alert-error-border, $alert-error-text);
+}
+
+// Info Alert
+.alert-info {
+  @include alert-style($alert-info-bg, $alert-info-border, $alert-info-text);
+}
+
+// Optional: Close button styles
+.alert-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+// Responsive adjustments for small screens
+@media (max-width: 768px) {
+  .alert {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .alert-icon {
+    font-size: 16px;
+  }
+}

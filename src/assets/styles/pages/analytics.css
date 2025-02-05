@@ -1,0 +1,199 @@
+/* General Styles for Analytics Page */
+.analytics-page {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f7fc;
+    min-height: 100vh;
+    padding: 30px;
+  }
+  
+  /* Title Section */
+  .analytics-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Container for All Analytics Cards */
+  .analytics-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  /* Card Styles */
+  .analytics-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .analytics-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Card Header */
+  .card-header {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* Card Content */
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-content span {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .card-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0084ff;
+  }
+  
+  /* Chart Container */
+  .chart-container {
+    margin-top: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .chart-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .chart {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    background-color: #e6f0f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Filter Section */
+  .filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .filter-section select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+  
+  .filter-section .date-range {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .filter-section .date-range input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 120px;
+  }
+  
+  /* Performance Metrics */
+  .performance-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .performance-metrics .metric {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .performance-metrics .metric .metric-header {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #666;
+  }
+  
+  .performance-metrics .metric .metric-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4caf50;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .analytics-cards-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .filter-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .filter-section select,
+    .filter-section .date-range input {
+      width: 100%;
+    }
+  
+    .performance-metrics .metric {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .analytics-title {
+      font-size: 1.5rem;
+    }
+  
+    .card-header {
+      font-size: 1.2rem;
+    }
+  
+    .card-content span {
+      font-size: 1rem;
+    }
+  
+    .card-value {
+      font-size: 1.6rem;
+    }
+  
+    .chart-container {
+      padding: 10px;
+    }
+  
+    .performance-metrics .metric .metric-value {
+      font-size: 1.5rem;
+    }
+  }
+  

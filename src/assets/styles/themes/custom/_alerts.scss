@@ -1,0 +1,88 @@
+// Alert Styles
+// -------------------
+$alert-success-bg: #d4edda;
+$alert-success-border: #c3e6cb;
+$alert-success-text: #155724;
+
+$alert-error-bg: #f8d7da;
+$alert-error-border: #f5c6cb;
+$alert-error-text: #721c24;
+
+$alert-info-bg: #d1ecf1;
+$alert-info-border: #bee5eb;
+$alert-info-text: #0c5460;
+
+$alert-warning-bg: #fff3cd;
+$alert-warning-border: #ffeeba;
+$alert-warning-text: #856404;
+
+$alert-border-radius: 0.25rem;
+$alert-padding: 0.75rem 1.25rem;
+$alert-font-size: 1rem;
+
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $alert-padding;
+  border-radius: $alert-border-radius;
+  margin-bottom: 1rem;
+  font-size: $alert-font-size;
+  
+  &.alert-success {
+    background-color: $alert-success-bg;
+    border: 1px solid $alert-success-border;
+    color: $alert-success-text;
+  }
+  
+  &.alert-error {
+    background-color: $alert-error-bg;
+    border: 1px solid $alert-error-border;
+    color: $alert-error-text;
+  }
+
+  &.alert-info {
+    background-color: $alert-info-bg;
+    border: 1px solid $alert-info-border;
+    color: $alert-info-text;
+  }
+
+  &.alert-warning {
+    background-color: $alert-warning-bg;
+    border: 1px solid $alert-warning-border;
+    color: $alert-warning-text;
+  }
+  
+  .alert-icon {
+    margin-right: 1rem;
+  }
+
+  .alert-content {
+    flex-grow: 1;
+  }
+
+  .alert-close {
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    color: inherit;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+
+  .alert-close:hover {
+    opacity: 0.8;
+  }
+}
+
+// Responsive Design
+@media (max-width: 576px) {
+  .alert {
+    flex-direction: column;
+    text-align: center;
+
+    .alert-close {
+      margin-top: 0.5rem;
+    }
+  }
+}

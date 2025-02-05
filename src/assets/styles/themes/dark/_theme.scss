@@ -1,0 +1,136 @@
+// _theme.scss (Dark Theme)
+
+// Base color variables
+$primary-color: #1e1e1e;          // Dark background color
+$secondary-color: #121212;        // Slightly lighter dark color for sections
+$accent-color: #ff4081;           // Accent color (for buttons, highlights, etc.)
+$text-color: #e0e0e0;             // Light text for readability on dark background
+$subtext-color: #b0b0b0;          // Slightly darker text for secondary text
+$border-color: #333;              // Border color for elements (input fields, cards)
+$button-background: #444;         // Button background color
+$button-hover-background: #555;  // Button hover color
+$input-background: #333;          // Input fields background
+$input-border: #444;              // Border color for input fields
+$input-focus-border: #ff4081;     // Border color for focused input fields
+
+// Font settings
+$font-family: 'Roboto', sans-serif;
+$heading-font-weight: 700;
+$body-font-weight: 400;
+
+// Lightness for component separation
+$component-background: #222;      // Background color for cards, dropdowns, etc.
+$component-border: #444;          // Border color for components (dropdown, modals)
+$component-shadow: rgba(0, 0, 0, 0.5); // Shadow effect for components
+
+// Button styles
+$button-text-color: #e0e0e0;      // Text color for buttons
+$button-disabled-background: #555;
+$button-disabled-text-color: #999;
+
+// Header styles
+$header-background: #121212;      // Background for the header
+$header-text-color: #e0e0e0;      // Header text color
+
+// Link styles
+$link-color: #ff4081;             // Default link color
+$link-hover-color: #ff79c6;       // Link hover color
+
+// Scrollbar styles
+$scrollbar-track-color: #333;     // Track color for the scrollbar
+$scrollbar-thumb-color: #444;     // Thumb color for the scrollbar
+
+// Border radius for rounded corners
+$border-radius: 4px;
+
+// General body styles
+body {
+  background-color: $primary-color;
+  color: $text-color;
+  font-family: $font-family;
+  font-weight: $body-font-weight;
+}
+
+// Header styles
+header {
+  background-color: $header-background;
+  color: $header-text-color;
+  padding: 20px;
+  text-align: center;
+}
+
+// Button styles
+button {
+  background-color: $button-background;
+  color: $button-text-color;
+  border: 1px solid $button-background;
+  border-radius: $border-radius;
+  padding: 10px 20px;
+  font-weight: $heading-font-weight;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-hover-background;
+  }
+
+  &:disabled {
+    background-color: $button-disabled-background;
+    color: $button-disabled-text-color;
+    cursor: not-allowed;
+  }
+}
+
+// Input field styles
+input, textarea {
+  background-color: $input-background;
+  color: $text-color;
+  border: 1px solid $input-border;
+  border-radius: $border-radius;
+  padding: 10px;
+  font-size: 14px;
+
+  &:focus {
+    border-color: $input-focus-border;
+    outline: none;
+  }
+}
+
+// Card and component styles
+.card, .modal, .dropdown {
+  background-color: $component-background;
+  border: 1px solid $component-border;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 8px $component-shadow;
+  padding: 20px;
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $scrollbar-track-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $scrollbar-thumb-color;
+  border-radius: $border-radius;
+}
+
+// Heading styles
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $heading-font-weight;
+  color: $text-color;
+}
+

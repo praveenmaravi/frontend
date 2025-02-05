@@ -1,0 +1,113 @@
+// Default animations for Vision AI chatbot
+
+// Easing functions for smooth transitions
+$ease-in-out: cubic-bezier(0.25, 0.8, 0.25, 1);
+$ease-in: cubic-bezier(0.42, 0, 1, 1);
+$ease-out: cubic-bezier(0, 0, 0.58, 1);
+
+// Animation durations (in seconds)
+$short-duration: 0.3s;
+$medium-duration: 0.6s;
+$long-duration: 1s;
+
+// Keyframes for animations
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Utility classes for animations
+
+// Fade-in animation
+.fade-in {
+  animation: fadeIn $short-duration $ease-in-out;
+}
+
+// Fade-out animation
+.fade-out {
+  animation: fadeOut $short-duration $ease-in-out;
+}
+
+// Slide-in from the right
+.slide-in-right {
+  animation: slideInFromRight $medium-duration $ease-in-out;
+}
+
+// Slide-out to the right
+.slide-out-right {
+  animation: slideOutToRight $medium-duration $ease-in-out;
+}
+
+// Bounce-in animation (used for modals, notifications)
+.bounce-in {
+  animation: bounceIn $medium-duration $ease-in-out;
+}
+
+// Pulse animation (used for buttons, important elements)
+.pulse {
+  animation: pulse $long-duration infinite $ease-in-out;
+}
+
+// Custom class for smooth scrolling
+.scroll-smooth {
+  scroll-behavior: smooth;
+}

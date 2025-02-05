@@ -1,0 +1,191 @@
+// _helpers.scss
+
+// 1. Reset and Global Styles
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+// 2. Utility Classes for Spacing
+// Margin and Padding Utilities
+@mixin spacing($property, $size) {
+  #{$property}: $size;
+}
+
+.m-t-10 { @include spacing('margin-top', 10px); }
+.m-b-10 { @include spacing('margin-bottom', 10px); }
+.m-l-10 { @include spacing('margin-left', 10px); }
+.m-r-10 { @include spacing('margin-right', 10px); }
+
+.p-t-10 { @include spacing('padding-top', 10px); }
+.p-b-10 { @include spacing('padding-bottom', 10px); }
+.p-l-10 { @include spacing('padding-left', 10px); }
+.p-r-10 { @include spacing('padding-right', 10px); }
+
+// 3. Display and Flex Utilities
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+// 4. Text Utilities
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+// 5. Background and Colors
+.bg-primary {
+  background-color: #007bff;
+}
+
+.bg-secondary {
+  background-color: #6c757d;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.bg-dark {
+  background-color: #343a40;
+}
+
+.text-white {
+  color: white;
+}
+
+// 6. Border Utilities
+.border {
+  border: 1px solid #ccc;
+}
+
+.border-radius {
+  border-radius: 5px;
+}
+
+.border-none {
+  border: none;
+}
+
+// 7. Z-Index Utility
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-10 {
+  z-index: 10;
+}
+
+.z-index-100 {
+  z-index: 100;
+}
+
+// 8. Width and Height Utilities
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.h-auto {
+  height: auto;
+}
+
+// 9. Visibility and Overflow Utilities
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// 10. Transition Utilities
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.transition-opacity {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+

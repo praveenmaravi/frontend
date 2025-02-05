@@ -1,0 +1,60 @@
+// Dark Theme Color Palette
+
+// Background Colors
+$background-color: #121212;        // Dark background for the entire page
+$background-secondary: #1e1e1e;   // Secondary dark background (e.g., sidebar, cards)
+$background-light: #333333;        // Light background for forms and inputs
+
+// Text Colors
+$text-primary: #e0e0e0;            // Primary text color (e.g., headings, body text)
+$text-secondary: #b0b0b0;          // Secondary text color (e.g., metadata, less important info)
+$text-muted: #888888;              // Muted text color (e.g., disabled, less emphasis)
+$text-link: #1e90ff;               // Color for clickable links
+$text-placeholder: #666666;        // Placeholder text color (e.g., input fields)
+
+// Border & Divider Colors
+$border-color: #444444;            // Border color for form fields, dividers, etc.
+$divider-color: #555555;           // Color for separating sections (e.g., card dividers)
+
+// Button Colors
+$button-primary-background: #1e90ff;  // Primary button background (bright blue)
+$button-primary-text: #ffffff;        // Primary button text color (white)
+$button-secondary-background: #444444; // Secondary button background (dark gray)
+$button-secondary-text: #e0e0e0;      // Secondary button text color (light gray)
+$button-hover-background: #2685d1;    // Button hover background (light blue)
+
+// Input & Form Colors
+$input-background: #333333;         // Background for input fields (dark)
+$input-border: #555555;             // Border for input fields
+$input-text: #e0e0e0;               // Text color inside input fields
+$input-focus-border: #1e90ff;       // Focused input field border color (blue)
+
+// Alert & Notification Colors
+$alert-success-background: #4caf50;  // Success message background (green)
+$alert-success-text: #ffffff;        // Success message text color (white)
+$alert-error-background: #f44336;    // Error message background (red)
+$alert-error-text: #ffffff;          // Error message text color (white)
+$alert-warning-background: #ff9800;  // Warning message background (orange)
+$alert-warning-text: #ffffff;        // Warning message text color (white)
+
+// Card Colors
+$card-background: #1c1c1c;            // Background color for cards
+$card-shadow: rgba(0, 0, 0, 0.3);     // Card shadow for elevation effect
+
+// Link Colors
+$link-normal: #1e90ff;                // Default link color (blue)
+$link-hover: #b0c7e2;                 // Hover state for links (light blue)
+
+// Modal & Popup Colors
+$modal-background: #212121;           // Background color for modals
+$modal-header-background: #333333;    // Header background for modals
+$modal-text-color: #e0e0e0;           // Text color inside modals
+
+// Scrollbar Colors (optional)
+$scrollbar-track: #333333;            // Scrollbar track color (dark)
+$scrollbar-thumb: #555555;            // Scrollbar thumb color (lighter gray)
+$scrollbar-thumb-hover: #1e90ff;      // Scrollbar thumb hover color (blue)
+
+// Miscellaneous
+$accent-color: #ff5722;               // Accent color for highlights, icons (e.g., orange)
+$highlight-color: #bb86fc;            // Color used for text selection or highlighted items

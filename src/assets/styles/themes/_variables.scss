@@ -1,0 +1,56 @@
+// _variables.scss
+
+// Primary Colors
+$primary-color: #4CAF50;      // Main brand color (Green)
+$secondary-color: #FF9800;    // Accent color (Orange)
+$tertiary-color: #2196F3;     // Secondary accent (Blue)
+
+// Text Colors
+$text-primary: #333333;       // Primary text color (Dark)
+$text-secondary: #757575;     // Secondary text color (Grey)
+$text-muted: #BDBDBD;         // Muted text color (Light Grey)
+
+// Background Colors
+$background-light: #FFFFFF;   // Light background (White)
+$background-dark: #121212;    // Dark background (Black/Dark)
+$background-muted: #F5F5F5;   // Muted background (Light Grey)
+
+// Borders
+$border-color: #E0E0E0;       // Light border color
+$border-radius: 8px;          // Standard border radius
+
+// Button Colors
+$btn-primary-bg: $primary-color;      // Primary button background
+$btn-primary-text: #FFFFFF;           // Primary button text color
+$btn-secondary-bg: $secondary-color;  // Secondary button background
+$btn-secondary-text: #FFFFFF;         // Secondary button text color
+
+// Typography
+$font-family-base: 'Helvetica Neue', Arial, sans-serif;  // Base font family
+$font-size-base: 16px;                        // Base font size
+$font-size-lg: 18px;                          // Large font size
+$font-size-sm: 14px;                          // Small font size
+
+// Spacing
+$spacing-unit: 8px;     // Base spacing unit
+$spacing-xs: $spacing-unit * 0.5;
+$spacing-sm: $spacing-unit * 1;
+$spacing-md: $spacing-unit * 2;
+$spacing-lg: $spacing-unit * 3;
+$spacing-xl: $spacing-unit * 4;
+
+// Shadows
+$shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);   // Light shadow for elements
+$shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);  // Medium shadow for cards, modals
+$shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.2);   // Heavy shadow for pop-ups
+
+// Z-index
+$z-index-navbar: 1000;        // Navbar
+$z-index-modal: 1050;         // Modal dialogs
+$z-index-tooltip: 1100;       // Tooltip pop-ups
+
+// Breakpoints (for responsive design)
+$breakpoint-sm: 576px;        // Small devices (phones)
+$breakpoint-md: 768px;        // Medium devices (tablets)
+$breakpoint-lg: 992px;        // Large devices (desktops)
+$breakpoint-xl: 1200px;       // Extra large devices (large desktops)

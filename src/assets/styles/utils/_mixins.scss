@@ -1,0 +1,81 @@
+// utils/_mixins.scss
+
+// 1. Border Radius Mixin (for consistent rounded corners)
+@mixin border-radius($radius: 4px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+  }
+  
+  // 2. Flexbox Centering Mixin (for centering content in flex container)
+  @mixin flex-center($direction: row, $align-items: center, $justify-content: center) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+  }
+  
+  // 3. Box Shadow Mixin (for consistent box shadows)
+  @mixin box-shadow($x: 0px, $y: 2px, $blur: 4px, $color: rgba(0, 0, 0, 0.1)) {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+  }
+  
+  // 4. Responsive Breakpoint Mixin (for creating media queries)
+  @mixin breakpoint($size) {
+    @if $size == small {
+      @media (max-width: 576px) { @content; }
+    } @else if $size == medium {
+      @media (max-width: 768px) { @content; }
+    } @else if $size == large {
+      @media (max-width: 1024px) { @content; }
+    } @else if $size == xlarge {
+      @media (max-width: 1200px) { @content; }
+    }
+  }
+  
+  // 5. Transition Mixin (for consistent animations/transitions)
+  @mixin transition($properties: all, $duration: 0.3s, $ease: ease) {
+    transition: $properties $duration $ease;
+    -webkit-transition: $properties $duration $ease;
+    -moz-transition: $properties $duration $ease;
+    -o-transition: $properties $duration $ease;
+  }
+  
+  // 6. Clearfix Mixin (to clear floated elements)
+  @mixin clearfix {
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+  
+  // 7. Gradient Mixin (for cross-browser linear gradients)
+  @mixin gradient($direction: 45deg, $start-color, $end-color) {
+    background: linear-gradient($direction, $start-color, $end-color);
+    background: -webkit-linear-gradient($direction, $start-color, $end-color);
+    background: -moz-linear-gradient($direction, $start-color, $end-color);
+  }
+  
+  // 8. Font Mixin (for consistent font settings)
+  @mixin font($font-family: 'Helvetica, Arial, sans-serif', $font-weight: normal, $font-size: 16px, $line-height: 1.5) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+  
+  // 9. Media Query Mixin (for generic media queries)
+  @mixin media-query($min-width: 320px, $max-width: null) {
+    @if $max-width {
+      @media (min-width: $min-width) and (max-width: $max-width) { @content; }
+    } @else {
+      @media (min-width: $min-width) { @content; }
+    }
+  }
+  

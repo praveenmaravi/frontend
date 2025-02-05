@@ -1,0 +1,137 @@
+// Base Card Styles
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: $card-bg-color; // background color for the card
+    border-radius: 8px; // rounded corners
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // subtle shadow for depth
+    padding: 16px; // inner padding for card content
+    margin: 16px 0; // space between multiple cards
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // smooth hover effects
+    overflow: hidden; // ensure contents are clipped within card
+    cursor: pointer;
+  
+    &:hover {
+      transform: translateY(-5px); // slight lift on hover
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); // enhanced shadow on hover
+    }
+  }
+  
+  // Card Image
+  .card__image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-bottom: 16px; // space between image and content
+  }
+  
+  // Card Header
+  .card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .card__title {
+    font-size: 1.25rem; // larger title
+    font-weight: 600;
+    color: $primary-text-color; // primary text color
+    margin: 0;
+  }
+  
+  .card__subtitle {
+    font-size: 0.875rem; // smaller subtitle text
+    color: $secondary-text-color; // secondary text color
+    margin: 0;
+  }
+  
+  // Card Body
+  .card__body {
+    font-size: 1rem;
+    color: $primary-text-color; // main text color
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  
+  // Card Footer
+  .card__footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .card__button {
+    background-color: $button-bg-color;
+    color: $button-text-color;
+    padding: 10px 16px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: $button-bg-hover-color;
+    }
+  }
+  
+  // Card Variants (Optional)
+  .card--outlined {
+    background-color: transparent;
+    border: 1px solid $border-color;
+    box-shadow: none;
+  
+    &:hover {
+      transform: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .card--dark {
+    background-color: $dark-bg-color;
+    color: $light-text-color;
+  
+    .card__title,
+    .card__subtitle {
+      color: $light-text-color;
+    }
+  
+    &:hover {
+      background-color: $dark-bg-hover-color;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  // Card loading state (for skeleton loading)
+  .card--loading {
+    background-color: $loading-bg-color;
+    animation: pulse 1.5s infinite ease-in-out;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+  

@@ -1,0 +1,166 @@
+// _responsive.scss
+
+// Mobile First Approach (Base styles for mobile and tablet)
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; // Base font size
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+// Utility classes for responsiveness
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+// Typography adjustments
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+// Flexbox-based Layouts
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Flex Containers with Wrap Option
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+// Mobile Specific Styles
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2.5rem;  // Heading size for mobile
+  }
+
+  p {
+    font-size: 1rem;  // Text size for mobile
+  }
+
+  // Hide elements on mobile
+  .hide-mobile {
+    display: none;
+  }
+}
+
+// Tablet Specific Styles
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .flex {
+    flex-direction: row;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 3rem;  // Heading size for tablet
+  }
+
+  p {
+    font-size: 1.1rem;  // Text size for tablet
+  }
+
+  // Example of showing elements only on tablet
+  .hide-tablet {
+    display: none;
+  }
+}
+
+// Desktop Specific Styles
+@media screen and (min-width: 1025px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+
+  .flex {
+    flex-direction: row;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h1 {
+    font-size: 3.5rem;  // Heading size for desktop
+  }
+
+  p {
+    font-size: 1.2rem;  // Text size for desktop
+  }
+
+  // Desktop-specific styles
+  .desktop-nav {
+    display: block;
+  }
+}
+
+// Large Desktop or Extra Large Screens
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}

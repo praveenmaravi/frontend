@@ -1,0 +1,121 @@
+// _tables.scss
+
+// Table base styles
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+    font-size: 1rem;
+    color: $text-color;
+  
+    // Table head
+    th {
+      text-align: left;
+      padding: 0.75rem;
+      background-color: $table-header-bg-color;
+      color: $table-header-text-color;
+      font-weight: bold;
+      border-bottom: 2px solid $table-border-color;
+      text-transform: uppercase;
+    }
+  
+    // Table body
+    td {
+      padding: 0.75rem;
+      border-bottom: 1px solid $table-border-color;
+      vertical-align: top;
+    }
+  
+    // Zebra striping for table rows
+    tr:nth-child(even) {
+      background-color: $table-row-even-bg-color;
+    }
+  
+    tr:nth-child(odd) {
+      background-color: $table-row-odd-bg-color;
+    }
+  
+    // Hover effect for rows
+    tr:hover {
+      background-color: $table-row-hover-bg-color;
+      cursor: pointer;
+    }
+  
+    // Table borders
+    border: 1px solid $table-border-color;
+    border-radius: 5px;
+    overflow: hidden;
+  
+    // Responsive table (for mobile views)
+    @media (max-width: 768px) {
+      thead {
+        display: none; // Hide header on small screens
+      }
+  
+      tr {
+        display: block;
+        margin-bottom: 1rem;
+      }
+  
+      td {
+        display: block;
+        padding-left: 50%;
+        position: relative;
+  
+        &:before {
+          content: attr(data-label);
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  
+  // Table pagination styles
+  .table-pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  
+    .page-item {
+      margin: 0 5px;
+      cursor: pointer;
+  
+      &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+  
+      &.active {
+        font-weight: bold;
+        background-color: $pagination-active-bg-color;
+      }
+  
+      &:hover {
+        background-color: $pagination-hover-bg-color;
+      }
+  
+      .page-link {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: $pagination-text-color;
+        display: inline-block;
+      }
+    }
+  }
+  
+  // Customizable Colors for Tables (Define these in your main SCSS)
+  $table-header-bg-color: #f4f4f4;
+  $table-header-text-color: #333;
+  $table-border-color: #ddd;
+  $table-row-even-bg-color: #f9f9f9;
+  $table-row-odd-bg-color: #fff;
+  $table-row-hover-bg-color: #f1f1f1;
+  $table-pagination-active-bg-color: #007bff;
+  $table-pagination-hover-bg-color: #0056b3;
+  $pagination-text-color: #007bff;
+  $text-color: #333;
+  

@@ -1,0 +1,87 @@
+// _card.scss
+
+// Card container styling
+.card {
+    background-color: #fff; // White background
+    border-radius: 8px; // Rounded corners
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for elevation effect
+    overflow: hidden; // Ensures no content spills out of the rounded corners
+    transition: all 0.3s ease; // Smooth transition for hover effect
+  
+    // Hover effect
+    &:hover {
+      transform: translateY(-4px); // Lift effect on hover
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); // Stronger shadow on hover
+    }
+  
+    // Card content
+    .card-content {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    // Title styling
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #333; // Dark text color for title
+      margin-bottom: 8px;
+    }
+  
+    // Card description
+    .card-description {
+      font-size: 1rem;
+      color: #666; // Lighter text color for description
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+  
+    // Footer section (e.g., action buttons or links)
+    .card-footer {
+      display: flex;
+      justify-content: flex-start;
+      gap: 8px;
+      padding-top: 8px;
+      border-top: 1px solid #f0f0f0; // Light border separating footer from content
+  
+      // Button or link styling
+      .card-btn {
+        background-color: #007bff; // Blue button color
+        color: #fff; // White text
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px; // Rounded button corners
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #0056b3; // Darker blue on hover
+        }
+  
+        &:focus {
+          outline: none; // Remove default focus outline
+        }
+      }
+    }
+  }
+  
+  // Responsive styles for smaller screens
+  @media (max-width: 768px) {
+    .card {
+      margin: 8px; // Add space between cards on smaller screens
+    }
+  
+    .card-content {
+      padding: 12px; // Adjust padding for mobile devices
+    }
+  
+    .card-title {
+      font-size: 1.1rem; // Smaller font size for mobile
+    }
+  
+    .card-description {
+      font-size: 0.9rem; // Adjust description font size
+    }
+  }
+  

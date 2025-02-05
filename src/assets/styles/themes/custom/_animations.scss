@@ -1,0 +1,158 @@
+// _animations.scss
+
+// Basic Fade In Animation
+@mixin fadeIn($duration: 0.3s, $delay: 0s, $ease: ease-in) {
+    animation: fadeIn $duration $ease $delay;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  // Slide In from Left
+  @mixin slideInLeft($duration: 0.5s, $delay: 0s, $ease: ease-out) {
+    animation: slideInLeft $duration $ease $delay;
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  // Slide In from Right
+  @mixin slideInRight($duration: 0.5s, $delay: 0s, $ease: ease-out) {
+    animation: slideInRight $duration $ease $delay;
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  // Bounce In Animation
+  @mixin bounceIn($duration: 1s, $delay: 0s, $ease: ease-in-out) {
+    animation: bounceIn $duration $ease $delay;
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  // Shake Animation
+  @mixin shake($duration: 0.5s, $delay: 0s, $ease: ease-in-out) {
+    animation: shake $duration $ease $delay;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    75% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  // Zoom In Animation
+  @mixin zoomIn($duration: 0.4s, $delay: 0s, $ease: ease-in-out) {
+    animation: zoomIn $duration $ease $delay;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  // Pulse Animation (for attention-grabbing effect)
+  @mixin pulse($duration: 1.5s, $delay: 0s, $ease: ease-in-out) {
+    animation: pulse $duration $ease $delay infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  // Fade Out Animation
+  @mixin fadeOut($duration: 0.3s, $delay: 0s, $ease: ease-out) {
+    animation: fadeOut $duration $ease $delay;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  // Applying animations to specific elements
+  .chatbot-message {
+    @include fadeIn(0.4s);
+  }
+  
+  .chatbot-button {
+    @include slideInLeft(0.5s);
+  }
+  
+  .chatbot-header {
+    @include zoomIn(0.3s);
+  }
+  
+  .chatbot-input {
+    @include pulse(1s);
+  }
+  
+  .chatbot-fade-out {
+    @include fadeOut(0.4s);
+  }
+  

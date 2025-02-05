@@ -1,0 +1,141 @@
+// Modal Styles
+// =====================
+
+// Base modal container
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1050;
+    display: none;  // Initially hidden, will be toggled via JS or class
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+    will-change: transform, opacity;
+    
+    &.show {
+      display: block;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    
+    &.hide {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+    
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+      
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+      }
+  
+      .close {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: #999;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+  
+    .modal-body {
+      padding: 15px 0;
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+  
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #e0e0e0;
+  
+      .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &.cancel {
+          background-color: #f2f2f2;
+          color: #333;
+  
+          &:hover {
+            background-color: #e0e0e0;
+          }
+        }
+  
+        &.confirm {
+          background-color: #4caf50;
+          color: white;
+  
+          &:hover {
+            background-color: #45a049;
+          }
+        }
+      }
+    }
+  }
+  
+  // Backdrop overlay styles
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1040; // Behind the modal
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  
+    &.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  
+  // Responsive design for modals
+  @media screen and (max-width: 768px) {
+    .modal {
+      width: 90%;
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    .modal-header h2 {
+      font-size: 16px;
+    }
+  
+    .modal-body {
+      font-size: 14px;
+    }
+  }
+  
+  

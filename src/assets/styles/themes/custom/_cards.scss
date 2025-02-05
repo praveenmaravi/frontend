@@ -1,0 +1,87 @@
+// _cards.scss
+
+// Card container style
+.card {
+    background-color: $white;               // Default card background
+    border-radius: 12px;                    // Rounded corners
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Subtle shadow
+    padding: 20px;                          // Inner spacing
+    margin: 15px 0;                         // Margin for spacing between cards
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth hover effect
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    &:hover {
+      transform: translateY(-5px);            // Lift card on hover
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); // Enhanced shadow on hover
+    }
+    
+    &__header {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: $primary-color;                 // Header color based on theme
+      margin-bottom: 10px;                   // Space between header and body
+    }
+  
+    &__body {
+      font-size: 1rem;
+      color: $text-color;                    // Body text color
+      line-height: 1.5;
+      margin-bottom: 15px;                   // Space at the bottom
+    }
+  
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.875rem;
+      color: $secondary-text-color;           // Footer text color (e.g., muted color)
+      
+      .card__footer-button {
+        padding: 8px 16px;
+        background-color: $primary-color;    // Primary color for buttons
+        color: $white;                       // Button text color
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        
+        &:hover {
+          background-color: darken($primary-color, 10%); // Darken on hover
+        }
+        
+        &:disabled {
+          background-color: $disabled-color;  // Disabled state color
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+  
+  // Variants for different card types
+  .card--outlined {
+    border: 1px solid $border-color;         // Light border for outlined cards
+    background-color: transparent;
+  }
+  
+  .card--highlighted {
+    background-color: $highlight-color;      // Use a highlight background for special cards
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); // Lighter shadow
+  }
+  
+  // Media queries for responsiveness
+  @media (max-width: 768px) {
+    .card {
+      padding: 15px;                        // Reduce padding on smaller screens
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      margin: 10px 0;                       // Less margin on mobile devices
+    }
+  }
+  
+  

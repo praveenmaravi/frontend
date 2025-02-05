@@ -1,0 +1,62 @@
+/* Header.css */
+
+/* Basic Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .logo img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .header .breadcrumb {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .breadcrumb span {
+    margin-right: 5px;
+  }
+  
+  .header .breadcrumb a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+  }
+  
+  .header .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 20px;
+    }
+  
+    .header .breadcrumb {
+      margin-top: 10px;
+    }
+  }
+  

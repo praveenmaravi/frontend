@@ -1,0 +1,52 @@
+// Default Color Palette
+
+// Primary Colors
+$primary-color: #4CAF50;           // Green
+$primary-light: #80E27E;           // Lighter green
+$primary-dark: #087F23;           // Dark green
+$primary-text: #ffffff;           // White for text on primary color
+
+// Secondary Colors
+$secondary-color: #FFC107;         // Amber
+$secondary-light: #FFECB3;         // Lighter amber
+$secondary-dark: #FF9800;          // Dark amber
+$secondary-text: #212121;          // Dark gray for text on secondary color
+
+// Background Colors
+$background-light: #FAFAFA;        // Light background (almost white)
+$background-dark: #303030;         // Dark background
+$background-accent: #f0f0f0;       // Accent light background (for cards, sidebars)
+
+// Text Colors
+$text-primary: #212121;            // Primary text color (dark gray)
+$text-secondary: #757575;          // Secondary text color (light gray)
+$text-muted: #BDBDBD;              // Muted text (grayish)
+
+// Border Colors
+$border-color: #E0E0E0;            // Light gray borders
+$border-dark: #BDBDBD;              // Darker gray borders
+
+// Button Colors
+$button-bg: $primary-color;        // Default button background
+$button-bg-hover: $primary-dark;   // Button background when hovered
+$button-text: $primary-text;       // Button text color
+
+// Alert Colors
+$alert-success: #4CAF50;           // Green for success alerts
+$alert-info: #2196F3;              // Blue for info alerts
+$alert-warning: #FF9800;           // Amber for warning alerts
+$alert-error: #F44336;             // Red for error alerts
+
+// Link Colors
+$link-default: #1E88E5;            // Default link color (blue)
+$link-hover: #0D47A1;              // Darker blue on hover
+
+// Dark Mode
+$dark-mode-background: #121212;    // Dark background for dark mode
+$dark-mode-text: #E0E0E0;          // Text color for dark mode
+
+// Gradient Colors (for buttons, backgrounds, etc.)
+$gradient-primary: linear-gradient(135deg, $primary-light, $primary-dark);
+$gradient-secondary: linear-gradient(135deg, $secondary-light, $secondary-dark);
+
+// Add more colors as needed

@@ -1,0 +1,95 @@
+// _footer.scss - Styling for the footer section of the app
+
+// Base styles for the footer
+.footer {
+    background-color: #222; // Dark background for footer
+    color: #fff;            // White text color
+    padding: 30px 0;        // Padding around the footer content
+    text-align: center;     // Center-align text
+    font-size: 14px;        // Text size for the footer
+    line-height: 1.6;       // Line height for better readability
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    
+    // Border styling
+    border-top: 1px solid #444;
+  
+    // Media query for responsiveness
+    @media (max-width: 768px) {
+      padding: 20px 0;
+      font-size: 12px; // Reduce text size on smaller screens
+    }
+    
+    // Link styles inside footer
+    a {
+      color: #ddd; // Light grey color for links
+      text-decoration: none; // No underline for links
+      &:hover {
+        color: #f0a500; // Hover color for links
+        text-decoration: underline; // Underline on hover
+      }
+    }
+    
+    // Footer sections (e.g., social media links, company info)
+    .footer-section {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px; // Space between items
+      
+      // Media query for stacking footer sections on smaller screens
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px; // Reduce space between items on mobile
+      }
+    }
+  
+    // Footer copyright section
+    .footer-copyright {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #bbb; // Light grey for copyright
+      @media (max-width: 768px) {
+        margin-top: 10px;
+        font-size: 10px;
+      }
+    }
+  
+    // Social media icon styles
+    .social-icons {
+      display: flex;
+      gap: 10px;
+  
+      a {
+        font-size: 18px;
+        color: #ddd; // Icon color
+        &:hover {
+          color: #f0a500; // Icon color on hover
+        }
+      }
+    }
+    
+    // Footer contact information
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 14px;
+  
+      @media (max-width: 768px) {
+        text-align: center; // Center contact info on mobile
+      }
+  
+      .contact-item {
+        color: #bbb; // Lighter color for contact items
+        &:hover {
+          color: #f0a500; // Hover color for contact items
+        }
+      }
+    }
+  }
+  
+  

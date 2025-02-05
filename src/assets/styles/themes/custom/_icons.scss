@@ -1,0 +1,105 @@
+// _icons.scss
+
+// Font Awesome Icon Import (or any other icon font)
+@import '~font-awesome/css/font-awesome.min.css'; // Ensure Font Awesome is installed and available
+
+// Example of Material Icons
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// Global Icon Settings
+$icon-size: 24px; // Default icon size
+$icon-color: #333; // Default icon color
+
+// Icon Utility Classes
+.icon {
+  display: inline-block;
+  font-size: $icon-size;
+  color: $icon-color;
+  text-align: center;
+  vertical-align: middle;
+
+  &.icon-lg {
+    font-size: $icon-size * 1.5;
+  }
+
+  &.icon-sm {
+    font-size: $icon-size * 0.75;
+  }
+
+  &.icon-primary {
+    color: #007bff; // Primary color (can be customized)
+  }
+
+  &.icon-success {
+    color: #28a745; // Success color (can be customized)
+  }
+
+  &.icon-danger {
+    color: #dc3545; // Danger color (can be customized)
+  }
+
+  &.icon-warning {
+    color: #ffc107; // Warning color (can be customized)
+  }
+}
+
+// Example Icon Font Classes (Font Awesome / Material Icons)
+.icon-home {
+  @extend .icon;
+  &:before {
+    content: "\f015"; // Font Awesome code for "home"
+  }
+}
+
+.icon-user {
+  @extend .icon;
+  &:before {
+    content: "\f007"; // Font Awesome code for "user"
+  }
+}
+
+.icon-chat {
+  @extend .icon;
+  &:before {
+    content: "\f075"; // Font Awesome code for "comment"
+  }
+}
+
+.icon-settings {
+  @extend .icon;
+  &:before {
+    content: "\f013"; // Font Awesome code for "cogs"
+  }
+}
+
+// Using Material Icons (example)
+.icon-search {
+  @extend .icon;
+  font-family: 'Material Icons';
+  content: 'search';
+}
+
+.icon-help {
+  @extend .icon;
+  font-family: 'Material Icons';
+  content: 'help';
+}
+
+// SVG Icon Usage Example (if using SVG files)
+.icon-svg {
+  display: inline-block;
+  width: $icon-size;
+  height: $icon-size;
+  background-size: cover;
+}
+
+.icon-arrow {
+  @extend .icon-svg;
+  background-image: url('/path/to/arrow-icon.svg');
+}
+
+.icon-user-avatar {
+  @extend .icon-svg;
+  background-image: url('/path/to/user-avatar.svg');
+}
+

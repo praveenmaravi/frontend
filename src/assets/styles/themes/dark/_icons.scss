@@ -1,0 +1,59 @@
+// _icons.scss
+
+$icon-color-light: #fff; // Light icon color for dark theme
+$icon-color-dark: #333;  // Dark icon color for dark theme
+
+$icon-size: 24px;        // Default size of icons
+$icon-size-large: 32px;  // Large icon size
+$icon-size-small: 16px;  // Small icon size
+
+// Dark Theme Icon Styles
+.dark-theme {
+  .icon {
+    fill: $icon-color-light;
+    stroke: $icon-color-light;
+    width: $icon-size;
+    height: $icon-size;
+    transition: all 0.3s ease;
+  }
+
+  // Large Icon
+  .icon-large {
+    width: $icon-size-large;
+    height: $icon-size-large;
+  }
+
+  // Small Icon
+  .icon-small {
+    width: $icon-size-small;
+    height: $icon-size-small;
+  }
+
+  // Specific icons for different sections (example: settings)
+  .icon-settings {
+    fill: #f0f0f0;
+  }
+
+  .icon-chat {
+    fill: #ffcc00;
+  }
+
+  .icon-user {
+    fill: #99ccff;
+  }
+
+  .icon-notifications {
+    fill: #ff6666;
+  }
+
+  // Hover effect for icons
+  .icon:hover {
+    fill: $icon-color-dark;
+    cursor: pointer;
+  }
+
+  // Active icon states (example: when selected)
+  .icon-active {
+    fill: #007bff;
+  }
+}

@@ -1,0 +1,136 @@
+/* ChatbotSettings.css */
+
+/* General layout for the chatbot settings container */
+.chatbot-settings {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  /* Title Section */
+  .chatbot-settings h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form Section */
+  .chatbot-settings form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Input fields and labels */
+  .chatbot-settings label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .chatbot-settings input[type="text"],
+  .chatbot-settings input[type="number"],
+  .chatbot-settings select,
+  .chatbot-settings textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .chatbot-settings input[type="text"]:focus,
+  .chatbot-settings input[type="number"]:focus,
+  .chatbot-settings select:focus,
+  .chatbot-settings textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Button styling */
+  .chatbot-settings button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chatbot-settings button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Settings Section - Individual settings item */
+  .setting-item {
+    margin-bottom: 20px;
+  }
+  
+  .setting-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Switch for toggles */
+  .switch-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .switch-container label {
+    font-size: 16px;
+    color: #555;
+    margin-right: 10px;
+  }
+  
+  .switch-container input[type="checkbox"] {
+    width: 40px;
+    height: 20px;
+    border-radius: 15px;
+    appearance: none;
+    background-color: #ccc;
+    position: relative;
+  }
+  
+  .switch-container input[type="checkbox"]:checked {
+    background-color: #28a745;
+  }
+  
+  .switch-container input[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  .switch-container input[type="checkbox"]:checked:before {
+    left: 22px;
+  }
+  
+  /* Footer section */
+  .chatbot-settings .footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chatbot-settings .footer p {
+    font-size: 14px;
+    color: #777;
+  }
+  

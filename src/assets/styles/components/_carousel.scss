@@ -1,0 +1,109 @@
+// _carousel.scss
+
+// Variables for general styling
+$carousel-width: 100%;
+$carousel-height: 400px;
+$carousel-transition-speed: 0.5s;
+$carousel-dot-size: 12px;
+$carousel-dot-active-color: #fff;
+$carousel-dot-inactive-color: rgba(255, 255, 255, 0.5);
+
+// Container for the carousel
+.carousel {
+  position: relative;
+  width: $carousel-width;
+  height: $carousel-height;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #333;
+}
+
+// Carousel track (slides container)
+.carousel-track {
+  display: flex;
+  transition: transform $carousel-transition-speed ease-in-out;
+  width: 100%;
+}
+
+// Carousel slide
+.carousel-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+// Carousel dots (navigation)
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+
+  .dot {
+    width: $carousel-dot-size;
+    height: $carousel-dot-size;
+    border-radius: 50%;
+    background-color: $carousel-dot-inactive-color;
+    transition: background-color 0.3s ease;
+
+    &.active {
+      background-color: $carousel-dot-active-color;
+    }
+  }
+}
+
+// Previous and next buttons
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  &.prev {
+    left: 10px;
+  }
+
+  &.next {
+    right: 10px;
+  }
+}
+
+// Responsive styles for smaller screens
+@media (max-width: 768px) {
+  $carousel-height: 300px;
+
+  .carousel {
+    height: $carousel-height;
+  }
+
+  .carousel-dots {
+    bottom: 5px;
+  }
+}
+

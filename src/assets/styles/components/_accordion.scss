@@ -1,0 +1,103 @@
+// _accordion.scss
+
+// Accordion Container Styles
+.accordion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  // Accordion Item Styles
+  .accordion__item {
+    margin: 10px 0;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  
+    // When item is active, expand the content
+    &.active {
+      .accordion__header {
+        background-color: #007bff;
+        color: white;
+      }
+  
+      .accordion__panel {
+        max-height: 500px;
+        padding: 20px;
+      }
+    }
+  }
+  
+  // Accordion Header Styles
+  .accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e8e8e8;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #ccc;
+    }
+  
+    // Icon Styles for Accordion
+    .accordion__icon {
+      transition: transform 0.3s ease;
+    }
+  
+    &.active .accordion__icon {
+      transform: rotate(180deg); // Rotate icon when active
+    }
+  }
+  
+  // Accordion Panel Styles
+  .accordion__panel {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #f1f1f1;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    font-size: 14px;
+  }
+  
+  // Accordion Icon Styles (Default - Arrow)
+  .accordion__icon {
+    font-size: 18px;
+    color: #333;
+    transition: transform 0.3s ease;
+  }
+  
+  // Active Icon (Arrow up/down)
+  .accordion__icon--open {
+    transform: rotate(180deg);
+  }
+  
+  .accordion__icon--closed {
+    transform: rotate(0deg);
+  }
+  
+  // Responsive Design - Mobile view
+  @media (max-width: 768px) {
+    .accordion {
+      margin: 0;
+      padding: 5px;
+    }
+  
+    .accordion__header {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    .accordion__panel {
+      padding: 12px;
+    }
+  }
+  

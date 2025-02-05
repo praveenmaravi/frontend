@@ -1,0 +1,75 @@
+{
+    "countries": [
+      {
+        "name": "Afghanistan",
+        "code": "AF",
+        "capital": "Kabul",
+        "region": "Asia",
+        "subregion": "Southern Asia"
+      },
+      {
+        "name": "Albania",
+        "code": "AL",
+        "capital": "Tirana",
+        "region": "Europe",
+        "subregion": "Southern Europe"
+      },
+      {
+        "name": "Algeria",
+        "code": "DZ",
+        "capital": "Algiers",
+        "region": "Africa",
+        "subregion": "Northern Africa"
+      },
+      {
+        "name": "Andorra",
+        "code": "AD",
+        "capital": "Andorra la Vella",
+        "region": "Europe",
+        "subregion": "Southern Europe"
+      },
+      {
+        "name": "Angola",
+        "code": "AO",
+        "capital": "Luanda",
+        "region": "Africa",
+        "subregion": "Middle Africa"
+      },
+      {
+        "name": "Antigua and Barbuda",
+        "code": "AG",
+        "capital": "Saint John's",
+        "region": "Americas",
+        "subregion": "Caribbean"
+      },
+      {
+        "name": "Argentina",
+        "code": "AR",
+        "capital": "Buenos Aires",
+        "region": "Americas",
+        "subregion": "South America"
+      },
+      {
+        "name": "Armenia",
+        "code": "AM",
+        "capital": "Yerevan",
+        "region": "Asia",
+        "subregion": "Western Asia"
+      },
+      {
+        "name": "Australia",
+        "code": "AU",
+        "capital": "Canberra",
+        "region": "Oceania",
+        "subregion": "Australia and New Zealand"
+      },
+      {
+        "name": "Austria",
+        "code": "AT",
+        "capital": "Vienna",
+        "region": "Europe",
+        "subregion": "Western Europe"
+      }
+    ]
+  }
+  

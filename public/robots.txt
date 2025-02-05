@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /backend/         # Prevent crawling of backend routes
+Disallow: /app/             # Block access to application-level internal logic
+Disallow: /database/        # Prevent indexing of database-related files
+Disallow: /cloud-deployment/ # Sensitive deployment files
+Disallow: /tests/           # Testing and development files
+Disallow: /config/          # Configuration files
+Disallow: /docs/            # Internal documentation
+Disallow: /worker/          # Background task workers and logic
+
+# Allow specific folders if necessary
+Allow: /frontend/public/    # Allow assets like images, CSS, JS
+
+# Sitemap for search engines
+Sitemap: https://yourdomain.com/sitemap.xml

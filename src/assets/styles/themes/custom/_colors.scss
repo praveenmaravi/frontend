@@ -1,0 +1,48 @@
+// Color palette for the Vision AI Chatbot theme
+
+// Primary Colors
+$primary-color: #1a73e8;           // Blue (used for buttons, links, primary highlights)
+$primary-light: #66a3ff;           // Light Blue (used for hover states, lighter accents)
+$primary-dark: #0052cc;            // Dark Blue (used for headers, borders)
+
+// Secondary Colors
+$secondary-color: #fbbc05;         // Yellow (used for secondary buttons, alerts)
+$secondary-light: #ffdd56;         // Light Yellow (used for hover, hover effects)
+$secondary-dark: #b68200;          // Dark Yellow (used for emphasis on actions or important elements)
+
+// Background Colors
+$background-color: #f4f7fa;        // Light Gray Background (used for main background)
+$background-dark: #e0e6ef;         // Darker Gray (used for sidebars or footer)
+$background-light: #ffffff;        // White (used for card backgrounds, modal)
+$background-overlay: rgba(0, 0, 0, 0.3); // Overlay for modals and popups
+
+// Text Colors
+$text-color: #333333;              // Dark Gray for text (general text)
+$text-light: #7f8c8d;              // Light Gray Text (used for less important text)
+$text-dark: #000000;               // Black Text (used for headers or highlighted text)
+$text-link: $primary-color;        // Link Color (same as primary color)
+
+// Border and Divider Colors
+$border-color: #d1d8e0;            // Light Gray for borders
+$border-dark: #c2c2c2;             // Dark Gray (used for form inputs and containers)
+$divider-color: #e2e6f0;           // Divider Color (used for separating sections)
+
+// Success and Error Colors
+$success-color: #28a745;           // Green for success messages, success indicators
+$error-color: #dc3545;             // Red for error messages, error indicators
+
+// Info and Warning Colors
+$info-color: #17a2b8;              // Light Blue for information messages
+$warning-color: #ffc107;           // Yellow for warnings
+
+// Hover and Active States
+$hover-color: rgba(0, 0, 0, 0.1);  // Light hover effect for most elements
+$active-color: rgba(0, 0, 0, 0.2); // Slightly darker active effect
+
+// Shadows
+$box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);  // Light shadow for cards, modals
+$box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.2); // Medium shadow for elevated elements
+
+// State Colors
+$disabled-color: #b0bec5;           // Disabled state color for buttons and inputs
+$highlight-color: #ff4081;          // Accent highlight color for certain elements

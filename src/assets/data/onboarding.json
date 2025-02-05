@@ -1,0 +1,61 @@
+{
+    "greeting": {
+      "default": "Welcome to Vision AI! How can I assist you today?",
+      "personalized": "Hi {user_name}, welcome back! What can I help you with today?"
+    },
+    "onboarding_steps": [
+      {
+        "step": 1,
+        "title": "Welcome",
+        "description": "Let's get you started. I'll guide you through the setup process.",
+        "action": "start_setup"
+      },
+      {
+        "step": 2,
+        "title": "Select Your Industry",
+        "description": "Please choose the industry that best fits your business. This helps us tailor the experience for you.",
+        "options": [
+          { "label": "Healthcare", "value": "healthcare" },
+          { "label": "E-commerce", "value": "ecommerce" },
+          { "label": "Finance", "value": "finance" },
+          { "label": "Education", "value": "education" },
+          { "label": "Customer Support", "value": "customer_support" },
+          { "label": "Real Estate", "value": "real_estate" },
+          { "label": "Other", "value": "other" }
+        ],
+        "action": "select_industry"
+      },
+      {
+        "step": 3,
+        "title": "Create Your First Workflow",
+        "description": "Let's create a workflow that fits your needs. You can customize this workflow later.",
+        "action": "create_workflow"
+      },
+      {
+        "step": 4,
+        "title": "Connect Your Tools",
+        "description": "You can integrate your CRM, email platform, or other tools for enhanced performance.",
+        "action": "connect_tools"
+      },
+      {
+        "step": 5,
+        "title": "Review & Finish",
+        "description": "Take a moment to review the setup. Once you're ready, we’ll finalize your chatbot setup.",
+        "action": "finish_setup"
+      }
+    ],
+    "completion_message": {
+      "default": "You're all set up! Ready to start using Vision AI.",
+      "personalized": "Congratulations, {user_name}! Your setup is complete. Let’s get started."
+    },
+    "user_preferences": {
+      "language": "en",
+      "timezone": "UTC",
+      "theme": "light",
+      "notifications": {
+        "enabled": true,
+        "frequency": "daily"
+      }
+    }
+  }
+  

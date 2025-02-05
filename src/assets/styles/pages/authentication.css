@@ -1,0 +1,139 @@
+/* Global Styles for Authentication Pages */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container for authentication forms */
+  .auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7fb;
+  }
+  
+  .auth-box {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .auth-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .auth-box p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Input fields */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .input-field:focus {
+    border-color: #4e9f3d;
+    outline: none;
+  }
+  
+  .input-field.error {
+    border-color: #e74c3c;
+  }
+  
+  /* Submit Button */
+  .btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #4e9f3d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-submit:hover {
+    background-color: #45b27b;
+  }
+  
+  /* Links */
+  .auth-links {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .auth-links a {
+    color: #4e9f3d;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .auth-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Forgot Password Styles */
+  .forgot-password {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+  }
+  
+  .forgot-password a {
+    color: #4e9f3d;
+  }
+  
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Error Message */
+  .error-message {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .auth-box {
+      padding: 20px 30px;
+    }
+    
+    .auth-box h2 {
+      font-size: 1.6rem;
+    }
+  
+    .input-field {
+      padding: 8px;
+    }
+  
+    .btn-submit {
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
+  

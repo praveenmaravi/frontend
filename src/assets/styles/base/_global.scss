@@ -1,0 +1,225 @@
+// _global.scss
+
+// -----------------------------------
+// Variables
+// -----------------------------------
+$primary-color: #0052cc; // Main primary color (e.g., Vision AI blue)
+$secondary-color: #f4f7fa; // Light secondary color (backgrounds, borders)
+$accent-color: #ff5733; // Accent color (buttons, highlights)
+$font-family-base: 'Roboto', sans-serif; // Base font family
+$font-size-base: 16px; // Base font size
+$line-height-base: 1.5; // Line height for better readability
+$container-max-width: 1200px; // Max width of content container
+$border-radius: 4px; // Border radius for buttons, inputs, etc.
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
+
+// -----------------------------------
+// Global Styles
+// -----------------------------------
+
+// Reset some default browser styles
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  background-color: $secondary-color;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+// Links and interactive elements
+a {
+  text-decoration: none;
+  color: $primary-color;
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+// -----------------------------------
+// Layout and Containers
+// -----------------------------------
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col {
+  padding-left: 15px;
+  padding-right: 15px;
+  flex: 1;
+}
+
+// -----------------------------------
+// Typography
+// -----------------------------------
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  color: $primary-color;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+// -----------------------------------
+// Buttons
+// -----------------------------------
+.btn {
+  padding: 10px 20px;
+  border-radius: $border-radius;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  color: white;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.btn-secondary {
+  background-color: #e1e4e8;
+  color: #333;
+  &:hover {
+    background-color: darken(#e1e4e8, 10%);
+  }
+}
+
+// -----------------------------------
+// Inputs, Selects, Textareas
+// -----------------------------------
+input, select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  &:focus {
+    border-color: $primary-color;
+    outline: none;
+  }
+}
+
+// -----------------------------------
+// Cards and Boxes
+// -----------------------------------
+.card {
+  background-color: white;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  padding: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.card-body {
+  font-size: 1rem;
+  color: #333;
+}
+
+// -----------------------------------
+// Utility Classes
+// -----------------------------------
+// Center content horizontally and vertically
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Flexbox utilities
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+// Margins and padding
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.pt-1 { padding-top: 1rem; }
+.pb-1 { padding-bottom: 1rem; }
+
+// -----------------------------------
+// Media Queries for Responsiveness
+// -----------------------------------
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+  }
+}

@@ -1,0 +1,76 @@
+// Color Palette Definitions
+
+// Primary Colors
+$primary-color: #1e90ff; // Blue (for main action buttons, highlights)
+$primary-dark: #1c66b6;  // Darker shade of primary color
+$primary-light: #63a9ff; // Lighter shade of primary color
+
+// Secondary Colors
+$secondary-color: #32cd32; // Lime Green (for secondary actions)
+$secondary-dark: #28a828;  // Darker shade of secondary color
+$secondary-light: #80e080; // Lighter shade of secondary color
+
+// Neutral Colors
+$neutral-dark: #2f2f2f;   // Dark gray (for text, backgrounds)
+$neutral-medium: #808080; // Medium gray (for borders, secondary text)
+$neutral-light: #d3d3d3;  // Light gray (for backgrounds, borders)
+
+$white: #ffffff; // White (for text on dark backgrounds or icons)
+$black: #000000; // Black (for text and icons)
+
+// Background Colors
+$background-dark: #121212;  // Dark background for night mode or footer
+$background-light: #f5f5f5; // Light background for general content
+
+// Accent Colors
+$accent-blue: #007bff;      // Accent color for important links and actions
+$accent-red: #ff4040;       // Accent color for errors or warnings
+$accent-orange: #ff9900;    // Accent color for attention (e.g., notifications)
+
+// Status Colors
+$success-color: #28a745;    // Green (for success messages or indicators)
+$warning-color: #ffc107;    // Yellow (for warnings)
+$error-color: #dc3545;      // Red (for errors)
+$info-color: #17a2b8;       // Light blue (for informational messages)
+
+// Disabled Colors
+$disabled-color: #c8c8c8;   // Gray for disabled buttons or input fields
+$disabled-text: #a3a3a3;    // Light gray for disabled text
+
+// Shadow Colors
+$shadow-light: rgba(0, 0, 0, 0.1);  // Light shadow for UI elements
+$shadow-dark: rgba(0, 0, 0, 0.3);   // Dark shadow for depth effect
+
+// Gradient Colors (for buttons, cards, etc.)
+$gradient-primary: linear-gradient(90deg, $primary-color, $primary-light);
+$gradient-secondary: linear-gradient(90deg, $secondary-color, $secondary-light);
+
+// Utility Classes (Optional, for easy access in the UI)
+.bg-primary {
+  background-color: $primary-color;
+}
+
+.bg-secondary {
+  background-color: $secondary-color;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-success {
+  color: $success-color;
+}
+
+.text-error {
+  color: $error-color;
+}
+
+.text-muted {
+  color: $neutral-medium;
+}
+
+.border-muted {
+  border-color: $neutral-light;
+}
+

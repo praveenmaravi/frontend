@@ -1,0 +1,92 @@
+// _cards.scss
+// Default card styles for Vision AI Chatbot
+// This file handles the styling of cards in the default theme
+
+// Variables for card colors and dimensions
+$card-bg: #ffffff;
+$card-border-radius: 8px;
+$card-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+$card-padding: 16px;
+$card-margin: 12px;
+$card-title-color: #333;
+$card-subtitle-color: #777;
+$card-border: 1px solid #e0e0e0;
+$card-hover-bg: #f9f9f9;
+$card-action-bg: #007bff;
+$card-action-color: #fff;
+$card-action-hover-bg: #0056b3;
+$card-action-padding: 8px 16px;
+$card-action-border-radius: 4px;
+
+// Card container styles
+.card {
+  background-color: $card-bg;
+  border-radius: $card-border-radius;
+  box-shadow: $card-shadow;
+  padding: $card-padding;
+  margin: $card-margin;
+  border: $card-border;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  // Card title styles
+  &__title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: $card-title-color;
+    margin-bottom: 8px;
+  }
+
+  // Card subtitle styles
+  &__subtitle {
+    font-size: 1rem;
+    color: $card-subtitle-color;
+    margin-bottom: 16px;
+  }
+
+  // Card content styles (e.g., description, message, etc.)
+  &__content {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 16px;
+  }
+
+  // Card footer for actions like buttons
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+
+    // Action button styles (e.g., for responses, interactions)
+    &-button {
+      background-color: $card-action-bg;
+      color: $card-action-color;
+      padding: $card-action-padding;
+      border-radius: $card-action-border-radius;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $card-action-hover-bg;
+      }
+
+      &:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  // Hover effect on cards
+  &:hover {
+    background-color: $card-hover-bg;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  // Responsive design: small screens
+  @media (max-width: 768px) {
+    padding: 12px;
+    margin: 8px;
+  }
+}
+

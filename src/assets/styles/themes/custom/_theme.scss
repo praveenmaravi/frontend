@@ -1,0 +1,181 @@
+// _theme.scss - Custom theme for Vision AI Chatbot
+
+// Colors
+$primary-color: #1e3a8a;   // Primary color (e.g., blue)
+$secondary-color: #3b82f6; // Secondary color (lighter blue)
+$accent-color: #10b981;    // Accent color (green)
+$background-color: #f9fafb; // Background color (light grey)
+$text-color: #1f2937;       // Default text color (dark grey)
+$muted-text-color: #6b7280; // Muted text (light grey)
+$error-color: #ef4444;      // Error message color (red)
+$warning-color: #f59e0b;    // Warning color (yellow)
+$success-color: $10b981;    // Success message color (green)
+
+// Font Family
+$font-family-primary: 'Roboto', sans-serif; // Primary font (can be updated as needed)
+$font-family-secondary: 'Arial', sans-serif; // Fallback font
+
+// Typography
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-sm: 14px;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// Spacing (Padding and Margin)
+$space-xs: 8px;
+$space-sm: 16px;
+$space-md: 24px;
+$space-lg: 32px;
+$space-xl: 40px;
+
+// Border Radius
+$border-radius: 8px;
+$border-radius-sm: 4px;
+
+// Box Shadows
+$box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+// Buttons
+$button-padding: $space-sm $space-md;
+$button-font-size: $font-size-base;
+$button-radius: $border-radius;
+$button-primary-bg: $primary-color;
+$button-primary-text-color: white;
+$button-secondary-bg: $secondary-color;
+$button-secondary-text-color: white;
+$button-hover-bg: darken($primary-color, 10%);
+$button-hover-text-color: white;
+
+// Inputs
+$input-bg: white;
+$input-border: #d1d5db; // Light border color
+$input-border-focus: $primary-color; // Focused border color
+$input-text-color: $text-color;
+
+// Cards
+$card-bg: white;
+$card-border: #e5e7eb; // Light border color
+$card-shadow: $box-shadow-sm;
+$card-padding: $space-md;
+
+// Headers and Titles
+$header-bg: $primary-color;
+$header-text-color: white;
+$header-font-size: $font-size-lg;
+$subheader-font-size: $font-size-base;
+$subheader-text-color: $muted-text-color;
+
+// Links
+$link-color: $primary-color;
+$link-hover-color: darken($primary-color, 10%);
+
+// Responsive Design Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
+
+// Dark Mode (Optional)
+$dark-bg: #18181b;
+$dark-text-color: #d1d5db;
+$dark-primary-color: #3b82f6;
+
+// Theme Variables Override for Dark Mode
+@media (prefers-color-scheme: dark) {
+  $background-color: $dark-bg;
+  $text-color: $dark-text-color;
+  $primary-color: $dark-primary-color;
+  $button-primary-bg: $dark-primary-color;
+  $header-bg: $dark-primary-color;
+  $link-color: $dark-primary-color;
+  // Other dark mode overrides
+}
+
+// Global Styles
+body {
+  font-family: $font-family-primary;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  margin-bottom: $space-sm;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $button-padding;
+  font-size: $button-font-size;
+  border-radius: $button-radius;
+  background-color: $button-primary-bg;
+  color: $button-primary-text-color;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $button-hover-bg;
+    color: $button-hover-text-color;
+  }
+}
+
+input,
+textarea {
+  padding: $space-sm;
+  font-size: $font-size-base;
+  border: 1px solid $input-border;
+  border-radius: $border-radius;
+  background-color: $input-bg;
+  color: $input-text-color;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: $input-border-focus;
+    outline: none;
+  }
+}
+
+// Card Component Styles
+.card {
+  background-color: $card-bg;
+  border: 1px solid $card-border;
+  box-shadow: $card-shadow;
+  padding: $card-padding;
+  border-radius: $border-radius;
+}
+
+// Link Styles
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+// Responsive Styles
+@media (max-width: $breakpoint-sm) {
+  body {
+    font-size: $font-size-sm;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  body {
+    font-size: $font-size-base;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  body {
+    font-size: $font-size-lg;
+  }
+}

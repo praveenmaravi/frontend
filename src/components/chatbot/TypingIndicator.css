@@ -1,0 +1,19 @@
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+  }
+  
+  .typing-indicator span {
+    display: inline-block;
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  

@@ -1,0 +1,84 @@
+// themes/dark/_borders.scss
+
+// Primary Border Color
+$primary-border-color: #4f4f4f; // Light grey border for a dark theme
+$secondary-border-color: #2a2a2a; // Darker grey border for subtle dividers
+
+// Focused and Hovered Borders
+$focus-border-color: #ffcc00; // A golden yellow for focus states
+$hover-border-color: #6c757d; // Lighter grey for hover states
+
+// Borders for Different Elements
+$input-border: $primary-border-color;
+$button-border: $primary-border-color;
+$card-border: $secondary-border-color;
+$divider-border: $secondary-border-color;
+
+// Border Radius (to maintain consistency across elements)
+$border-radius: 4px;
+
+// Styling for Border States
+.border {
+  border: 1px solid $primary-border-color;
+  border-radius: $border-radius;
+}
+
+.input-field {
+  border: 1px solid $input-border;
+  padding: 0.5rem;
+  background-color: #333; // Dark background for input fields
+  color: #fff;
+  transition: border-color 0.3s ease-in-out;
+
+  &:focus {
+    border-color: $focus-border-color;
+    outline: none;
+  }
+
+  &:hover {
+    border-color: $hover-border-color;
+  }
+}
+
+.button {
+  border: 2px solid $button-border;
+  padding: 0.75rem 1.5rem;
+  background-color: #222; // Dark background for buttons
+  color: #fff;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
+
+  &:hover {
+    border-color: $hover-border-color;
+  }
+
+  &:focus {
+    border-color: $focus-border-color;
+    outline: none;
+  }
+}
+
+.card {
+  border: 1px solid $card-border;
+  background-color: #1c1c1c; // Dark background for cards
+  padding: 1rem;
+  border-radius: $border-radius;
+}
+
+.divider {
+  border-top: 1px solid $divider-border;
+  margin: 1rem 0;
+}
+
+// Borders for forms or lists
+.form-section {
+  border-bottom: 1px solid $secondary-border-color;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.list-item {
+  border-bottom: 1px solid $primary-border-color;
+  padding: 0.5rem;
+}

@@ -1,0 +1,90 @@
+/* Maintenance.css */
+
+/* Ensure the body takes up the full height of the screen */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Container for the entire page */
+  .maintenance-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  
+  /* Heading Style */
+  .maintenance-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Message Style */
+  .maintenance-message {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+  
+  /* Spinner Style for loading indication */
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin-top: 20px;
+  }
+  
+  /* Animation for the spinner */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Button style for users to try again or return home */
+  .maintenance-button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  
+  .maintenance-button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .maintenance-header {
+      font-size: 2rem;
+    }
+  
+    .maintenance-message {
+      font-size: 1rem;
+    }
+  
+    .spinner {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  

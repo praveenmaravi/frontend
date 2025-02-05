@@ -1,0 +1,68 @@
+# Node.js and npm-related
+/node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build output
+/dist/
+/build/
+/out/
+
+# Logs
+/logs/
+/*.log
+*.log.*
+
+# IDE or editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Dependency directories (if using other package managers like pnpm)
+.pnp/
+.pnp.js
+
+# Next.js build (if using Next.js for frontend)
+.next/
+
+# Testing output
+/coverage/
+
+# Miscellaneous
+*.tgz
+*.bak
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Docker-related files (optional, if Docker is used in the project)
+.docker/
+docker-compose.override.yml
+
+# ESLint cache
+/.eslintcache
+
+# Webpack cache
+/.webpack/
+
+# React Native (if applicable)
+/ios/
+/android/
+
+# Storybook (if applicable)
+/storybook-static/
+
+# Prettier configuration
+.prettierignore

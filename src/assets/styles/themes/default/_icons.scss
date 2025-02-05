@@ -1,0 +1,100 @@
+// _icons.scss
+
+// 1. Base Icon Styles
+$icon-size: 24px;  // Default icon size
+$icon-color: #333; // Default icon color (dark gray)
+$icon-hover-color: #007bff; // Hover color for icons
+
+// 2. Utility Classes for Icons
+.icon {
+  display: inline-block;
+  width: $icon-size;
+  height: $icon-size;
+  fill: $icon-color; // Default icon color
+  stroke: $icon-color; // Default icon color for stroke icons
+  transition: all 0.3s ease; // Smooth transition for hover effects
+
+  &.icon-lg {
+    width: 32px;
+    height: 32px;
+  }
+
+  &.icon-sm {
+    width: 16px;
+    height: 16px;
+  }
+
+  &.icon-primary {
+    fill: #007bff; // Blue for primary actions
+    stroke: #007bff;
+  }
+
+  &.icon-secondary {
+    fill: #6c757d; // Gray for secondary actions
+    stroke: #6c757d;
+  }
+
+  &:hover {
+    fill: $icon-hover-color; // Change color on hover
+    stroke: $icon-hover-color; // Change stroke on hover
+  }
+}
+
+// 3. Custom Icon Styles
+// Here you can define specific icon classes if you're using SVGs or a custom icon set
+
+// Example for custom icons (e.g., SVG classes)
+.icon-home {
+  background-image: url('/path-to-icons/home.svg');
+  background-size: cover;
+}
+
+.icon-settings {
+  background-image: url('/path-to-icons/settings.svg');
+  background-size: cover;
+}
+
+.icon-search {
+  background-image: url('/path-to-icons/search.svg');
+  background-size: cover;
+}
+
+// 4. Icon Fonts (e.g., FontAwesome or Material Icons)
+// If you're using an icon font library, you can add these styles to handle their usage.
+
+.fa {
+  font-family: 'FontAwesome';
+  font-size: $icon-size;
+  color: $icon-color;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-size: $icon-size;
+  color: $icon-color;
+}
+
+// Example of using icon font size and hover effect for font-based icons
+.fa:hover, .material-icons:hover {
+  color: $icon-hover-color;
+}
+
+// 5. Icon Sizing and Positioning Utilities
+.icon-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 6. Responsive Icon Sizes (optional for responsiveness)
+@media (max-width: 768px) {
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon-lg {
+    width: 28px;
+    height: 28px;
+  }
+}

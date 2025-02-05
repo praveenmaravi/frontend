@@ -1,0 +1,72 @@
+// _tabs.scss
+
+// Define your color palette
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$hover-color: #2980b9;
+$tab-active-bg: #f1f1f1;
+$tab-inactive-bg: #fff;
+$tab-border-color: #ddd;
+
+// Tabs container
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid $tab-border-color;
+  
+  // If you want to add some gap between the tabs
+  gap: 15px;
+  
+  // Prevent tabs from wrapping
+  flex-wrap: nowrap;
+}
+
+// Tab item style
+.tab {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid $tab-border-color;
+  border-radius: 5px 5px 0 0;
+  background-color: $tab-inactive-bg;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+  &:hover {
+    background-color: $hover-color;
+    color: #fff;
+  }
+
+  // When tab is active (selected)
+  &.active {
+    background-color: $tab-active-bg;
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+// Tab content container (the content below the tabs)
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid $tab-border-color;
+  border-radius: 5px;
+  
+  // When the tab is active, show the content
+  &.active {
+    display: block;
+  }
+}
+
+// Optional: If you want to add some custom transitions or effects when switching tabs
+.tab-content {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  
+  &.active {
+    opacity: 1;
+  }
+}

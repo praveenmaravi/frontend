@@ -1,0 +1,189 @@
+// _common.scss
+
+// 1. Global Variables
+$primary-color: #3498db;       // Main theme color
+$secondary-color: #2ecc71;     // Secondary color for accents
+$font-family: 'Roboto', sans-serif;  // Global font
+$base-font-size: 16px;         // Base font size
+
+// 2. Global Mixins
+
+// Media Queries
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @else if $point == tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+  @else {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+}
+
+// Flexbox Centering
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 3. Global Styles
+
+// Reset default styles for consistency across browsers
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $base-font-size;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+// Utility classes
+
+// Margin and Padding utility
+.m-1 { margin: 0.5rem; }
+.mt-1 { margin-top: 0.5rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.p-1 { padding: 0.5rem; }
+.pt-1 { padding-top: 0.5rem; }
+.pb-1 { padding-bottom: 0.5rem; }
+
+// Text utility classes
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-uppercase { text-transform: uppercase; }
+
+// 4. Button Styles
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.secondary {
+    background-color: $secondary-color;
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
+
+// 5. Container for Layouts
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include breakpoint(tablet) {
+    padding: 0 15px;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 0 10px;
+  }
+}
+
+// 6. Form Elements
+input,
+textarea,
+select {
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 15px;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+}
+
+button[type="submit"] {
+  @extend .btn;
+}
+
+// 7. Footer Styles
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.875rem;
+
+  .footer-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+// 8. Card Layout
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// 9. Responsive Design (Media Queries)
+
+@include breakpoint(mobile) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@include breakpoint(tablet) {
+  body {
+    font-size: 15px;
+  }
+}
+

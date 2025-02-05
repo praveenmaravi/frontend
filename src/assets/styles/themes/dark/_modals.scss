@@ -1,0 +1,140 @@
+// _modals.scss - Dark Theme Modals
+
+$modal-bg-color: #2c2c2c;  // Dark background for modals
+$modal-overlay-bg: rgba(0, 0, 0, 0.6);  // Semi-transparent dark overlay
+$modal-border-radius: 8px;  // Rounded corners for modals
+$modal-padding: 20px;  // Padding inside the modal
+$modal-header-bg: #3e3e3e;  // Background color for the modal header
+$modal-header-color: #fff;  // Text color for modal header
+$modal-footer-bg: #3e3e3e;  // Background color for the footer
+$modal-footer-color: #fff;  // Text color for footer
+$modal-btn-bg: #4d89ff;  // Button background color
+$modal-btn-hover-bg: #3b70cc;  // Button hover background color
+$modal-btn-text-color: #fff;  // Button text color
+$modal-close-btn-bg: transparent;  // Close button background
+$modal-close-btn-color: #fff;  // Close button color
+
+// Modal container (for dark theme)
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $modal-overlay-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+// Modal content box
+.modal-content {
+  background-color: $modal-bg-color;
+  border-radius: $modal-border-radius;
+  padding: $modal-padding;
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+// Modal header
+.modal-header {
+  background-color: $modal-header-bg;
+  color: $modal-header-color;
+  padding: 10px;
+  border-radius: $modal-border-radius $modal-border-radius 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Modal body
+.modal-body {
+  padding: 20px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+  overflow-y: auto;
+}
+
+// Modal footer
+.modal-footer {
+  background-color: $modal-footer-bg;
+  color: $modal-footer-color;
+  padding: 15px;
+  text-align: right;
+  border-radius: 0 0 $modal-border-radius $modal-border-radius;
+}
+
+// Modal buttons
+.modal-btn {
+  background-color: $modal-btn-bg;
+  color: $modal-btn-text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: $modal-btn-hover-bg;
+  }
+}
+
+// Close button in the header
+.modal-close-btn {
+  background-color: $modal-close-btn-bg;
+  color: $modal-close-btn-color;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  
+  &:hover {
+    color: #f2f2f2;
+  }
+}
+
+// Close button on hover effect
+.modal-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+// Animations for opening and closing modals
+@keyframes modal-open {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modal-close {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
+.modal-content {
+  animation: modal-open 0.3s ease-in-out;
+}
+
+.modal-overlay.hide .modal-content {
+  animation: modal-close 0.3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+

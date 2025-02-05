@@ -1,0 +1,120 @@
+// _alerts.scss
+// This file defines the styling for alert messages (success, error, warning, info)
+
+$alert-padding: 15px;
+$alert-border-radius: 5px;
+$alert-font-size: 14px;
+
+// Alert colors
+$alert-success-bg: #4CAF50;
+$alert-error-bg: #F44336;
+$alert-warning-bg: #FF9800;
+$alert-info-bg: #2196F3;
+$alert-light-bg: #f1f1f1;
+
+$alert-success-color: white;
+$alert-error-color: white;
+$alert-warning-color: white;
+$alert-info-color: white;
+$alert-light-color: #333;
+
+// Base alert styling
+.alert {
+  display: flex;
+  align-items: center;
+  padding: $alert-padding;
+  border-radius: $alert-border-radius;
+  font-size: $alert-font-size;
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &-icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  &-message {
+    flex: 1;
+  }
+}
+
+// Success Alert
+.alert-success {
+  background-color: $alert-success-bg;
+  color: $alert-success-color;
+}
+
+.alert-success .alert-icon {
+  color: $alert-success-color;
+}
+
+// Error Alert
+.alert-error {
+  background-color: $alert-error-bg;
+  color: $alert-error-color;
+}
+
+.alert-error .alert-icon {
+  color: $alert-error-color;
+}
+
+// Warning Alert
+.alert-warning {
+  background-color: $alert-warning-bg;
+  color: $alert-warning-color;
+}
+
+.alert-warning .alert-icon {
+  color: $alert-warning-color;
+}
+
+// Info Alert
+.alert-info {
+  background-color: $alert-info-bg;
+  color: $alert-info-color;
+}
+
+.alert-info .alert-icon {
+  color: $alert-info-color;
+}
+
+// Light Alert (used for informational or less urgent messages)
+.alert-light {
+  background-color: $alert-light-bg;
+  color: $alert-light-color;
+}
+
+.alert-light .alert-icon {
+  color: $alert-light-color;
+}
+
+// Add an optional close button to dismiss the alerts
+.alert-close {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  background: none;
+  border: none;
+  color: inherit;
+
+  &:hover {
+    color: #888;
+  }
+}
+
+// Optional animation for alert appearance
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert {
+  animation: slideIn 0.5s ease-out;
+}

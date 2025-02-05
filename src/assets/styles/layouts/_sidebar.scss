@@ -1,0 +1,120 @@
+// _sidebar.scss
+
+// Variables
+$sidebar-width: 250px;
+$sidebar-bg-color: #2c3e50;
+$sidebar-hover-bg-color: #34495e;
+$sidebar-item-color: #ecf0f1;
+$sidebar-item-hover-color: #1abc9c;
+$sidebar-header-bg-color: #1abc9c;
+$sidebar-item-padding: 15px;
+$sidebar-item-font-size: 16px;
+$transition-time: 0.3s;
+$border-radius: 5px;
+
+// Mixin for smooth transition
+@mixin transition($properties) {
+  transition: $properties $transition-time ease;
+}
+
+// Sidebar Container
+.sidebar {
+  width: $sidebar-width;
+  height: 100vh;
+  background-color: $sidebar-bg-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0 $border-radius $border-radius 0;
+  z-index: 1000;
+  @include transition(width);
+
+  // Sidebar Header
+  .sidebar-header {
+    background-color: $sidebar-header-bg-color;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+  // Sidebar Items
+  .sidebar-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+
+    .sidebar-item {
+      padding: $sidebar-item-padding;
+      font-size: $sidebar-item-font-size;
+      color: $sidebar-item-color;
+      cursor: pointer;
+      @include transition(background-color, color);
+
+      &:hover {
+        background-color: $sidebar-hover-bg-color;
+        color: $sidebar-item-hover-color;
+      }
+
+      &.active {
+        background-color: $sidebar-hover-bg-color;
+        color: $sidebar-item-hover-color;
+      }
+    }
+  }
+
+  // Sidebar Footer (Optional)
+  .sidebar-footer {
+    background-color: $sidebar-bg-color;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #95a5a6;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+  // Sidebar Toggle Button for Mobile View
+  .sidebar-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    background-color: #fff;
+    color: $sidebar-bg-color;
+    border-radius: 50%;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1100;
+    @include transition(background-color);
+
+    &:hover {
+      background-color: $sidebar-hover-bg-color;
+    }
+  }
+}
+
+// Mobile Styles (when sidebar is collapsed or toggled)
+@media (max-width: 768px) {
+  .sidebar {
+    width: 0;
+    overflow: hidden;
+    // When expanded, sidebar should occupy full width
+    &.open {
+      width: $sidebar-width;
+    }
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+}

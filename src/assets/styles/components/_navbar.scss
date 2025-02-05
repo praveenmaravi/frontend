@@ -1,0 +1,152 @@
+// _navbar.scss
+
+$primary-color: #007bff;
+$secondary-color: #343a40;
+$light-color: #f8f9fa;
+$dark-color: #212529;
+$font-family: 'Roboto', sans-serif;
+$transition-speed: 0.3s;
+
+.navbar {
+  background-color: $secondary-color;
+  color: $light-color;
+  font-family: $font-family;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  transition: background-color $transition-speed;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $light-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+
+    .nav-item {
+      margin-right: 20px;
+      list-style: none;
+
+      a {
+        color: $light-color;
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color $transition-speed;
+
+        &:hover {
+          color: $primary-color;
+        }
+
+        &:active {
+          color: darken($primary-color, 10%);
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .search-bar {
+    position: relative;
+    input {
+      border: 1px solid $light-color;
+      border-radius: 25px;
+      padding: 5px 15px;
+      background-color: $dark-color;
+      color: $light-color;
+      font-size: 0.875rem;
+      transition: width $transition-speed;
+
+      &:focus {
+        outline: none;
+        width: 200px;
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $light-color;
+    }
+  }
+
+  .toggle-button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: $light-color;
+    font-size: 2rem;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 20px;
+      padding: 0;
+    }
+
+    .nav-item {
+      margin: 10px 0;
+      width: 100%;
+    }
+
+    .toggle-button {
+      display: block;
+    }
+
+    &.open {
+      .nav-links {
+        display: flex;
+      }
+    }
+
+    .search-bar {
+      display: none;
+    }
+  }
+}
+
+// Utility classes
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

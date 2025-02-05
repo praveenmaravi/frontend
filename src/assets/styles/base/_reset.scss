@@ -1,0 +1,83 @@
+/* _reset.scss: A modern CSS reset to ensure consistent styling across browsers */
+
+/* Remove default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+  
+  /* Set base font size and smooth text rendering */
+  html {
+    font-size: 16px; /* Base font size */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Remove list styles */
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  /* Remove link underlines and reset color */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Reset table properties */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Reset images and media */
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Reset form elements */
+  input,
+  textarea,
+  button,
+  select {
+    font: inherit;
+    color: inherit;
+    border: none;
+    outline: none;
+    background: none;
+  }
+  
+  /* Set base styles for buttons */
+  button {
+    cursor: pointer;
+  }
+  
+  /* Reset blockquote styling */
+  blockquote {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after {
+    content: '';
+    content: none;
+  }
+  
+  /* Reset hr element */
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* Set defaults for body */
+  body {
+    line-height: 1.5;
+    font-family: Arial, sans-serif; /* Change to your preferred default font */
+    background-color: #fff;
+    color: #333;
+  }

@@ -1,0 +1,25 @@
+/* Avatar.css */
+
+.avatar {
+    display: inline-block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  
+  .avatar.user {
+    background-color: #e0f7fa; /* Light blue for user */
+  }
+  
+  .avatar.bot {
+    background-color: #f1f1f1; /* Light grey for bot */
+  }
+  
+  .avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  

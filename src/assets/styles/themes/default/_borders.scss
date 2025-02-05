@@ -1,0 +1,81 @@
+// themes/default/_borders.scss
+
+// Define border radii for different elements
+$border-radius-small: 4px;
+$border-radius-medium: 8px;
+$border-radius-large: 12px;
+
+// Define default border color variables
+$border-color-light: #E0E0E0;
+$border-color-dark: #333333;
+$border-color-primary: #0066FF; // Primary theme color for borders
+$border-color-secondary: #FF5733; // Secondary theme color for borders
+
+// Define border thickness
+$border-thickness-thin: 1px;
+$border-thickness-medium: 2px;
+$border-thickness-thick: 3px;
+
+// Default border for inputs, buttons, and containers
+.border-default {
+  border: $border-thickness-thin solid $border-color-light;
+  border-radius: $border-radius-medium;
+}
+
+// Border for active elements (e.g., focused input fields)
+.border-active {
+  border: $border-thickness-medium solid $border-color-primary;
+  border-radius: $border-radius-medium;
+}
+
+// Border for disabled elements (e.g., disabled buttons, form inputs)
+.border-disabled {
+  border: $border-thickness-thin solid $border-color-dark;
+  border-radius: $border-radius-small;
+  opacity: 0.5;
+}
+
+// Border for error states (e.g., invalid form fields)
+.border-error {
+  border: $border-thickness-medium solid #FF0000; // Red border for errors
+  border-radius: $border-radius-small;
+}
+
+// Custom borders for cards, containers, and sections
+.border-card {
+  border: $border-thickness-medium solid $border-color-light;
+  border-radius: $border-radius-large;
+  padding: 15px;
+}
+
+// Custom shadow border for emphasis (e.g., on focus or highlighted elements)
+.border-shadow {
+  border: $border-thickness-thin solid $border-color-light;
+  border-radius: $border-radius-medium;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+// Border for tooltips and popups
+.border-tooltip {
+  border: $border-thickness-thin solid $border-color-dark;
+  border-radius: $border-radius-small;
+}
+
+// Responsive borders (adjust borders based on screen size)
+@media (max-width: 768px) {
+  .border-default {
+    border-width: $border-thickness-thin;
+  }
+  
+  .border-active {
+    border-width: $border-thickness-thin;
+  }
+  
+  .border-card {
+    border-width: $border-thickness-thin;
+  }
+  
+  .border-error {
+    border-width: $border-thickness-thin;
+  }
+}

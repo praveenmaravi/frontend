@@ -1,0 +1,149 @@
+// _mixins.scss
+
+// 1. **Media Query Mixins**
+// For easy media queries with flexible breakpoints
+
+@mixin breakpoint($size) {
+    @if $size == small {
+      @media (max-width: 576px) {
+        @content;
+      }
+    }
+    @else if $size == medium {
+      @media (max-width: 768px) {
+        @content;
+      }
+    }
+    @else if $size == large {
+      @media (max-width: 1024px) {
+        @content;
+      }
+    }
+    @else if $size == xlarge {
+      @media (max-width: 1440px) {
+        @content;
+      }
+    }
+  }
+  
+  // Usage: 
+  // .some-class {
+  //   @include breakpoint(medium) {
+  //     background: red;
+  //   }
+  // }
+  
+  // 2. **Border Radius Mixins**
+  // Common border-radius styles to standardize across the project
+  
+  @mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+  }
+  
+  // Usage: 
+  // .button {
+  //   @include border-radius(8px);
+  // }
+  
+  // 3. **Flexbox Centering Mixin**
+  // Flexbox mixin for easy centering of elements
+  
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // Usage:
+  // .centered-content {
+  //   @include flex-center;
+  // }
+  
+  // 4. **Font Sizing Mixin**
+  // Easy way to manage font sizes across the application
+  
+  @mixin font-size($size) {
+    font-size: $size;
+    line-height: $size * 1.5;
+  }
+  
+  // Usage: 
+  // .header {
+  //   @include font-size(24px);
+  // }
+  
+  // 5. **Shadow Mixins**
+  // Multiple shadow options for standardizing box shadows
+  
+  @mixin box-shadow($x: 0, $y: 0, $blur: 10px, $color: rgba(0, 0, 0, 0.1)) {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+  }
+  
+  // Usage: 
+  // .card {
+  //   @include box-shadow(0, 4px, 12px, rgba(0, 0, 0, 0.15));
+  // }
+  
+  // 6. **Font Awesome Icon Mixin**
+  // Mixin to style Font Awesome icons
+  
+  @mixin fa-icon($size: 1em, $color: #333) {
+    font-size: $size;
+    color: $color;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  // Usage: 
+  // .icon {
+  //   @include fa-icon(2em, red);
+  // }
+  
+  // 7. **Transition Mixin**
+  // Standard transition mixin for consistent animation timing
+  
+  @mixin transition($properties, $duration: 0.3s, $timing-function: ease) {
+    transition: $properties $duration $timing-function;
+    -webkit-transition: $properties $duration $timing-function;
+    -moz-transition: $properties $duration $timing-function;
+    -o-transition: $properties $duration $timing-function;
+  }
+  
+  // Usage:
+  // .button:hover {
+  //   @include transition(all, 0.2s, ease-in-out);
+  // }
+  
+  // 8. **Z-Index Mixin**
+  // Easily handle z-index layers for overlapping elements
+  
+  @mixin z-index($value) {
+    z-index: $value;
+  }
+  
+  // Usage: 
+  // .modal {
+  //   @include z-index(100);
+  // }
+  
+  // 9. **Clearfix Mixin**
+  // Clearfix mixin for clearing floats
+  
+  @mixin clearfix {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  
+  // Usage:
+  // .container {
+  //   @include clearfix;
+  // }
+  
+  

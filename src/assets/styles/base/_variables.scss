@@ -1,0 +1,81 @@
+// _variables.scss
+
+// Color Palette
+$primary-color: #3498db;        // Main theme color (blue)
+$secondary-color: #2ecc71;      // Secondary color (green)
+$accent-color: #e74c3c;         // Accent color (red)
+$background-color: #f7f7f7;     // Background color (light gray)
+$text-color: #333333;           // Default text color (dark gray)
+$muted-text-color: #7f8c8d;     // Muted text color (light gray)
+$border-color: #dddddd;         // Border color for input fields and containers
+
+// Font Sizes
+$font-size-base: 16px;          // Base font size (16px)
+$font-size-large: 18px;         // Large font size for headings
+$font-size-small: 14px;         // Small font size for subtitles or captions
+
+// Font Family
+$font-family-primary: 'Roboto', sans-serif;  // Primary font
+$font-family-secondary: 'Arial', sans-serif; // Fallback font
+
+// Spacing
+$spacing-xs: 4px;              // Extra small spacing
+$spacing-sm: 8px;              // Small spacing
+$spacing-md: 16px;             // Medium spacing
+$spacing-lg: 32px;             // Large spacing
+
+// Border Radius
+$border-radius: 8px;           // Standard border radius for rounded elements
+
+// Breakpoints for responsiveness
+$breakpoint-xs: 480px;         // Mobile devices (portrait)
+$breakpoint-sm: 768px;         // Tablets
+$breakpoint-md: 1024px;        // Small laptops
+$breakpoint-lg: 1440px;        // Desktops
+
+// Box Shadow
+$box-shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);   // Small shadow for input fields, buttons
+$box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.2);  // Medium shadow for cards, modals
+$box-shadow-large: 0 6px 12px rgba(0, 0, 0, 0.3);  // Larger shadow for elevated components
+
+// Button Styles
+$button-background-color: $primary-color;         // Default button background color
+$button-hover-background-color: darken($primary-color, 10%); // Button hover color
+$button-text-color: #ffffff;                      // Button text color
+
+// Input Styles
+$input-background-color: #ffffff;                 // Background for input fields
+$input-border-color: $border-color;               // Border color for input fields
+$input-focus-border-color: $primary-color;        // Focused border color for input fields
+
+// Alert Styles
+$alert-success-color: #2ecc71;                    // Success alert color
+$alert-warning-color: #f39c12;                    // Warning alert color
+$alert-danger-color: $accent-color;               // Danger alert color
+
+// Tooltip Styles
+$tooltip-background-color: #333333;               // Tooltip background color
+$tooltip-text-color: #ffffff;                     // Tooltip text color
+$tooltip-border-radius: 4px;                      // Tooltip border radius
+$tooltip-padding: 8px 12px;                       // Tooltip padding
+
+// Navigation Styles
+$navbar-background-color: $primary-color;         // Navbar background color
+$navbar-text-color: #ffffff;                      // Navbar text color
+$navbar-item-hover-color: darken($primary-color, 15%); // Navbar item hover color
+
+// Card Styles
+$card-background-color: #ffffff;                  // Card background color
+$card-shadow: $box-shadow-medium;                  // Card shadow
+$card-border-radius: $border-radius;              // Card border radius
+
+// Modal Styles
+$modal-background-color: rgba(0, 0, 0, 0.5);      // Modal background overlay color
+$modal-content-background-color: #ffffff;         // Modal content background color
+$modal-padding: 20px;                             // Modal content padding
+
+// Dropdown Styles
+$dropdown-background-color: #ffffff;              // Dropdown background color
+$dropdown-border-color: $border-color;            // Dropdown border color
+$dropdown-hover-background-color: $primary-color; // Dropdown item hover background
+$dropdown-text-color: $text-color;                // Dropdown item text color

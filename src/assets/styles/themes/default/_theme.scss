@@ -1,0 +1,169 @@
+// _theme.scss - Default theme for Vision AI Chatbot
+
+// Color palette
+$primary-color: #0066FF;  // Primary brand color (blue)
+$secondary-color: #F5F5F5; // Light grey background for chat UI
+$accent-color: #FFCC00;    // Accent color for buttons and highlights
+$text-color: #333333;      // Text color for readability
+$background-color: #ffffff; // Background color for chat container
+$input-bg-color: #F2F2F2;  // Background color for user input area
+$border-color: #E0E0E0;    // Border color for input fields, chat bubbles, etc.
+$button-bg-color: #0066FF; // Default button background color
+$button-text-color: #ffffff; // Button text color
+
+// Font settings
+$font-family-base: 'Arial', sans-serif; // Base font for the chatbot interface
+$font-size-base: 16px;  // Base font size for readability
+$font-size-large: 18px; // Larger font size for headers and titles
+$font-size-small: 14px; // Smaller font size for secondary text
+
+// Spacing
+$padding-base: 16px;  // Base padding for elements like chat bubbles, input fields, etc.
+$padding-large: 32px; // Larger padding for more spaced-out elements (e.g., main containers)
+$margin-base: 16px;   // Base margin for general elements
+$margin-large: 32px;  // Larger margin for wider spaces
+
+// Border radius
+$border-radius-base: 8px; // Default border radius for buttons, inputs, and chat bubbles
+$border-radius-pill: 25px; // Rounded corners for input fields (e.g., search bar, user input)
+
+// Shadow effects for UI elements
+$box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Standard shadow for cards and chat UI
+
+// Button Styles
+.button {
+  background-color: $button-bg-color;
+  color: $button-text-color;
+  font-size: $font-size-base;
+  padding: $padding-base $padding-large;
+  border: none;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+  box-shadow: $box-shadow;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($button-bg-color, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba($primary-color, 0.4);
+  }
+}
+
+// Chat UI Styles
+.chat-container {
+  background-color: $background-color;
+  border-radius: $border-radius-base;
+  padding: $padding-large;
+  box-shadow: $box-shadow;
+  max-width: 600px;
+  margin: $margin-large auto;
+}
+
+.chat-header {
+  font-size: $font-size-large;
+  font-weight: bold;
+  color: $primary-color;
+  margin-bottom: $margin-base;
+}
+
+.chat-bubble {
+  background-color: $secondary-color;
+  color: $text-color;
+  border-radius: $border-radius-base;
+  padding: $padding-base;
+  margin-bottom: $margin-base;
+  max-width: 70%;
+  display: inline-block;
+}
+
+.chat-bubble-user {
+  background-color: $primary-color;
+  color: $button-text-color;
+  text-align: right;
+}
+
+.chat-bubble-bot {
+  background-color: $input-bg-color;
+  color: $text-color;
+}
+
+// Input Styles
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-top: $margin-large;
+}
+
+.input-field {
+  background-color: $input-bg-color;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-pill;
+  padding: $padding-base;
+  font-size: $font-size-base;
+  width: 100%;
+  margin-right: $margin-base;
+}
+
+.input-field:focus {
+  border-color: $primary-color;
+  outline: none;
+}
+
+.input-send-button {
+  background-color: $primary-color;
+  color: $button-text-color;
+  font-size: $font-size-base;
+  padding: $padding-base;
+  border-radius: $border-radius-pill;
+  cursor: pointer;
+  box-shadow: $box-shadow;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba($primary-color, 0.4);
+  }
+}
+
+// Chat Window Styles
+.chat-window {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: $padding-base;
+  margin-bottom: $padding-large;
+}
+
+// Loader Styles
+.loader {
+  display: block;
+  border: 4px solid transparent;
+  border-top: 4px solid $primary-color;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Media Queries for Responsive Design
+@media (max-width: 768px) {
+  $font-size-base: 14px;
+  .chat-container {
+    width: 100%;
+    padding: $padding-base;
+  }
+
+  .input-field {
+    font-size: $font-size-small;
+  }
+}

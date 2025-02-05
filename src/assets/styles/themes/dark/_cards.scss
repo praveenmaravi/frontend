@@ -1,0 +1,90 @@
+// dark/_cards.scss
+
+// Card Container
+.card {
+    background-color: #2a2a2a; // Dark background for card
+    border-radius: 8px; // Rounded corners
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); // Soft shadow for depth
+    padding: 20px;
+    transition: all 0.3s ease; // Smooth transition on hover
+    color: #ffffff; // White text color for contrast
+    
+    // Hover effect to raise the card and change its background
+    &:hover {
+      background-color: #333333;
+      transform: translateY(-5px); // Slight lift effect
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); // Stronger shadow on hover
+    }
+  
+    // Header Section of the card (e.g., Title)
+    .card-header {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #f1f1f1; // Lighter color for text to stand out
+    }
+  
+    // Body Section of the card (e.g., Description, Content)
+    .card-body {
+      font-size: 1rem;
+      color: #d0d0d0; // Light gray for body text
+      line-height: 1.5; // Improve readability
+    }
+  
+    // Footer Section of the card (e.g., Buttons, Actions)
+    .card-footer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      // Button styles in footer
+      .btn {
+        background-color: #5e81f4; // Bright blue button for visibility
+        color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #4a6ae2; // Darker blue on hover
+        }
+      }
+    }
+  }
+  
+  // Card with Image - For cards containing images (e.g., products)
+  .card-with-image {
+    .card-header {
+      font-size: 1.5rem; // Larger font for titles with images
+    }
+  
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+  }
+  
+  // Card variations for special cases (e.g., no footer or no image)
+  .card-no-footer {
+    .card-footer {
+      display: none;
+    }
+  }
+  
+  .card-no-header {
+    .card-header {
+      display: none;
+    }
+  }
+  

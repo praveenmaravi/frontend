@@ -1,0 +1,91 @@
+// _alerts.scss for dark theme
+// This file is used to define alert notification styles for dark mode theme.
+
+// General Alert Container Styles
+.alert {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+  
+    &.alert-info {
+      background-color: #333; // Dark background for info
+      border-left: 5px solid #3498db; // Info blue
+      color: #ecf0f1; // Light text color for contrast
+    }
+  
+    &.alert-success {
+      background-color: #2c3e50; // Darker background for success
+      border-left: 5px solid #2ecc71; // Success green
+      color: #ecf0f1; // Light text color
+    }
+  
+    &.alert-warning {
+      background-color: #2c3e50; // Darker background for warning
+      border-left: 5px solid #f39c12; // Warning yellow/orange
+      color: #ecf0f1; // Light text color
+    }
+  
+    &.alert-danger {
+      background-color: #2c3e50; // Darker background for danger
+      border-left: 5px solid #e74c3c; // Danger red
+      color: #ecf0f1; // Light text color
+    }
+  
+    &.alert-dark {
+      background-color: #1c1c1c; // Darkest background for dark alert
+      border-left: 5px solid #34495e; // Dark theme border color
+      color: #ecf0f1; // Light text color
+    }
+  
+    &.alert-light {
+      background-color: #34495e; // Light background for light alert
+      border-left: 5px solid #bdc3c7; // Light border color
+      color: #ecf0f1; // Light text color
+    }
+    
+    // Icon Styling (optional)
+    .alert-icon {
+      margin-right: 15px;
+      font-size: 20px;
+      color: inherit; // inherit color from alert class
+    }
+  
+    // Alert Content (text)
+    .alert-text {
+      flex-grow: 1;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  
+    // Close button for alert
+    .alert-close {
+      margin-left: 15px;
+      background: transparent;
+      border: none;
+      color: #ecf0f1;
+      font-size: 20px;
+      cursor: pointer;
+  
+      &:hover {
+        color: #bdc3c7; // Slightly lighter on hover
+      }
+    }
+  }
+  
+  // Animation for the alerts (optional for fade-in/out effects)
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .alert {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  

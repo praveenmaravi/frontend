@@ -1,0 +1,112 @@
+/* AIInsights.css */
+
+/* Container for the AI Insights component */
+.ai-insights-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Title of the AI Insights Section */
+  .ai-insights-header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Subheading for additional details */
+  .ai-insights-subheader {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Card container for individual insights */
+  .ai-insight-card {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+  }
+  
+  .ai-insight-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Insights Title */
+  .ai-insight-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Description for the Insight */
+  .ai-insight-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  /* Insights Data (for graphs, stats, etc.) */
+  .ai-insight-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4caf50;
+  }
+  
+  /* Graph area for charts/graphs */
+  .ai-insight-graph {
+    margin-top: 20px;
+    height: 200px;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Add a simple loading spinner for data fetching */
+  .ai-insight-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #888;
+  }
+  
+  .ai-insight-loading span {
+    font-size: 1.2rem;
+  }
+  
+  /* For mobile responsiveness */
+  @media (max-width: 768px) {
+    .ai-insights-container {
+      padding: 15px;
+    }
+  
+    .ai-insight-card {
+      margin: 5px 0;
+    }
+  
+    .ai-insight-data {
+      font-size: 1rem;
+    }
+  }
+  
+  

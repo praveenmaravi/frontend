@@ -1,0 +1,93 @@
+/* ChatHeader.css */
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 12px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .chat-header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-header .logo img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .chat-header .logo h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .chat-header .controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-header .controls button {
+    background-color: transparent;
+    border: none;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .chat-header .controls button:hover {
+    color: #007bff;
+  }
+  
+  .chat-header .controls button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .chat-header .controls .mute-icon,
+  .chat-header .controls .settings-icon {
+    font-size: 18px;
+  }
+  
+  .chat-header .controls .user-icon {
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .chat-header .controls .user-icon:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media Query for small screens */
+  @media (max-width: 600px) {
+    .chat-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .chat-header .logo h1 {
+      font-size: 18px;
+    }
+  
+    .chat-header .controls {
+      margin-top: 10px;
+    }
+  
+    .chat-header .controls button {
+      font-size: 14px;
+    }
+  }
+  

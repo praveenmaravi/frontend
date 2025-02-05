@@ -1,0 +1,84 @@
+// _spacing.scss - Dark Theme Spacing
+
+// Global Spacing Variables
+$spacing-unit: 16px; // Default spacing unit, used for all spacing calculations
+
+// Margin
+$margin-xs: $spacing-unit / 2;       // 8px
+$margin-sm: $spacing-unit;           // 16px
+$margin-md: $spacing-unit * 2;       // 32px
+$margin-lg: $spacing-unit * 3;       // 48px
+$margin-xl: $spacing-unit * 4;       // 64px
+
+// Padding
+$padding-xs: $spacing-unit / 2;      // 8px
+$padding-sm: $spacing-unit;          // 16px
+$padding-md: $spacing-unit * 2;      // 32px
+$padding-lg: $spacing-unit * 3;      // 48px
+$padding-xl: $spacing-unit * 4;      // 64px
+
+// Spacing for elements
+$space-xs: $spacing-unit / 2;        // 8px
+$space-sm: $spacing-unit;            // 16px
+$space-md: $spacing-unit * 2;        // 32px
+$space-lg: $spacing-unit * 3;        // 48px
+$space-xl: $spacing-unit * 4;        // 64px
+
+// Responsive Spacing (for mobile-first design)
+$spacing-xs: 12px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 40px;
+
+// Layout Spacing (containers, grids, etc.)
+$container-margin: $spacing-unit * 2; // 32px for overall container margin
+$grid-gap: $spacing-unit;            // 16px gap between grid items
+
+// Apply spacing for dark theme adjustments
+$background-dark: #121212; // Dark background for the theme
+$text-light: #E0E0E0;      // Light text color for readability
+
+// Dark theme margin and padding adjustments
+body {
+  background-color: $background-dark;
+  color: $text-light;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: $container-margin;
+  padding: $padding-md;
+}
+
+.header {
+  margin-bottom: $margin-lg;
+}
+
+.card {
+  padding: $padding-sm;
+  margin: $margin-sm;
+  background-color: #1d1d1d; // Dark background for cards
+  border-radius: 8px;
+}
+
+.button {
+  padding: $padding-xs $padding-sm;
+  margin: $space-sm;
+  background-color: #6200ea; // Primary button color
+  color: $text-light;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #3700b3; // Darker hover effect
+}
+
+.footer {
+  padding: $padding-md;
+  margin-top: $margin-xl;
+  background-color: #1d1d1d;
+}

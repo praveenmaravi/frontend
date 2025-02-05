@@ -1,0 +1,87 @@
+// Default Spacing Variables
+// All values in "rem" for scalability and responsiveness
+$space-xs: 0.25rem;     // Extra small spacing
+$space-sm: 0.5rem;      // Small spacing
+$space-md: 1rem;        // Medium spacing
+$space-lg: 1.5rem;      // Large spacing
+$space-xl: 2rem;        // Extra large spacing
+$space-xxl: 3rem;       // Extra extra large spacing
+
+// Spacing Mixins
+// These mixins can be applied to any element to manage spacing consistently
+
+// Margin Top
+@mixin mt($size) {
+  margin-top: scale-spacing($size);
+}
+
+// Margin Bottom
+@mixin mb($size) {
+  margin-bottom: scale-spacing($size);
+}
+
+// Margin Left
+@mixin ml($size) {
+  margin-left: scale-spacing($size);
+}
+
+// Margin Right
+@mixin mr($size) {
+  margin-right: scale-spacing($size);
+}
+
+// Margin
+@mixin m($size) {
+  margin: scale-spacing($size);
+}
+
+// Padding Top
+@mixin pt($size) {
+  padding-top: scale-spacing($size);
+}
+
+// Padding Bottom
+@mixin pb($size) {
+  padding-bottom: scale-spacing($size);
+}
+
+// Padding Left
+@mixin pl($size) {
+  padding-left: scale-spacing($size);
+}
+
+// Padding Right
+@mixin pr($size) {
+  padding-right: scale-spacing($size);
+}
+
+// Padding
+@mixin p($size) {
+  padding: scale-spacing($size);
+}
+
+// Spacing Scale Function
+// Use this function to get the correct spacing size from the variables defined above
+@function scale-spacing($size) {
+  @if $size == 'xs' {
+    @return $space-xs;
+  }
+  @else if $size == 'sm' {
+    @return $space-sm;
+  }
+  @else if $size == 'md' {
+    @return $space-md;
+  }
+  @else if $size == 'lg' {
+    @return $space-lg;
+  }
+  @else if $size == 'xl' {
+    @return $space-xl;
+  }
+  @else if $size == 'xxl' {
+    @return $space-xxl;
+  }
+  @else {
+    @return $space-md; // Default if no matching size is found
+  }
+}

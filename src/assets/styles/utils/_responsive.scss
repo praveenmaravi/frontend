@@ -1,0 +1,146 @@
+// _responsive.scss
+
+// Breakpoints for responsiveness
+$breakpoints: (
+  'xs': 0,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px
+);
+
+// Mixin for media queries
+@mixin media($size) {
+  @if map-has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$size}' not defined in \$breakpoints map.";
+  }
+}
+
+// Fluid grid system
+%container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  @extend %container;
+  max-width: 100%;
+}
+
+@include media('sm') {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@include media('md') {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@include media('lg') {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@include media('xl') {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@include media('xxl') {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+// Flexbox helpers for responsiveness
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Hide on small screens
+.hide-sm {
+  display: none;
+}
+
+@include media('sm') {
+  .hide-sm {
+    display: block;
+  }
+}
+
+// Show only on small screens
+.show-sm {
+  display: block;
+}
+
+@include media('sm') {
+  .show-sm {
+    display: none;
+  }
+}
+
+// Responsive padding and margin utilities
+%p-x-sm {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+%p-y-sm {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+%m-x-sm {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+%m-y-sm {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+// Responsive padding and margin for different breakpoints
+@each $breakpoint in map-keys($breakpoints) {
+  @include media($breakpoint) {
+    .p-x-#{$breakpoint} {
+      @extend %p-x-sm;
+    }
+    .p-y-#{$breakpoint} {
+      @extend %p-y-sm;
+    }
+    .m-x-#{$breakpoint} {
+      @extend %m-x-sm;
+    }
+    .m-y-#{$breakpoint} {
+      @extend %m-y-sm;
+    }
+  }
+}
+
