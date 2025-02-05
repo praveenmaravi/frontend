@@ -5,14 +5,20 @@ import { ProtectedRoute } from './router/guards/ProtectedRoute';  // Route guard
 import { ErrorBoundary } from './components/utils/ErrorBoundary'; // Error boundary
 import Layout from './components/layout/Layout'; // Layout component
 
-// Importing Views (Updated for proper structure and file names)
-import Dashboard from './views/Dashboard/Dashboard';  // Corrected import for Dashboard
+// Importing Views
+import Dashboard from './views/Dashboard/Dashboard';  
 import ChatbotInterface from './views/ChatbotInterface/ChatbotInterface';
-import SettingsPage from './views/settings/SettingsPage';  // Import the SettingsPage
-import AnalyticsPage from './views/analytics/AnalyticsPage'; // Updated Analytics import
-import MarketplacePage from './views/Marketplace/MarketplacePage'; // Correct Marketplace import
+import SettingsPage from './views/settings/SettingsPage';  
+import AnalyticsPage from './views/analytics/AnalyticsPage';
+import MarketplacePage from './views/Marketplace/MarketplacePage';
 import ErrorPage from './views/ErrorPage/ErrorPage';
-import Authentication from './views/Auth/Authentication';
+
+// Authentication Views
+import AuthPage from './views/Auth/AuthPage';
+import LoginPage from './views/Auth/LoginPage';
+import SignupPage from './views/Auth/SignupPage';
+import ForgotPasswordPage from './views/Auth/ForgotPasswordPage';
+import ResetPasswordPage from './views/Auth/ResetPasswordPage';
 
 // Importing Store Actions
 import { loadUserData } from './store/actions/userActions';
@@ -34,15 +40,21 @@ const App = () => {
           <ErrorBoundary>
             <Routes>
               {/* Protected Routes */}
-              <ProtectedRoute path="/" element={<Dashboard />} />  {/* Corrected to use Dashboard */}
+              <ProtectedRoute path="/" element={<Dashboard />} />
               <ProtectedRoute path="/chatbot" element={<ChatbotInterface />} />
 
               {/* Regular Routes */}
-              <Route path="/settings" element={<SettingsPage />} />  {/* Settings page route */}
-              <Route path="/analytics" element={<AnalyticsPage />} />  {/* Updated route */}
-              <Route path="/marketplace" element={<MarketplacePage />} />  {/* Corrected route */}
+              <Route path="/settings" element={<SettingsPage />} />
+              <Route path="/analytics" element={<AnalyticsPage />} />
+              <Route path="/marketplace" element={<MarketplacePage />} />
               <Route path="/error" element={<ErrorPage />} />
-              <Route path="/auth" element={<Authentication />} />
+
+              {/* Authentication Routes */}
+              <Route path="/auth" element={<AuthPage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/signup" element={<SignupPage />} />
+              <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+              <Route path="/reset-password" element={<ResetPasswordPage />} />
             </Routes>
           </ErrorBoundary>
         </Layout>
