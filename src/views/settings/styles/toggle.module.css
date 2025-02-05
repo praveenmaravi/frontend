@@ -1,0 +1,49 @@
+/* toggle.module.css */
+
+/* Base styles for the toggle switch container */
+.toggle-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  background-color: #e4e4e7;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Styles for the toggle button */
+.toggle-button {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* When the toggle is "ON" */
+.toggle-container.on {
+  background-color: #4ade80; /* Green for "on" state */
+}
+
+.toggle-container.on .toggle-button {
+  transform: translateX(30px); /* Move button to the right */
+}
+
+/* When the toggle is "OFF" */
+.toggle-container.off {
+  background-color: #f1f5f9; /* Light gray for "off" state */
+}
+
+.toggle-container.off .toggle-button {
+  transform: translateX(0); /* Move button to the left */
+}
+
+/* Optional: Text label next to the toggle */
+.toggle-label {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #333;
+}
