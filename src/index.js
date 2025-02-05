@@ -12,7 +12,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 // For global state management (Redux)
 import { Provider } from 'react-redux'; 
-import store from './store'; // Redux store
+import store from './store/store'; // Redux store
 
 // Optional: For toast notifications
 import { ToastContainer } from 'react-toastify'; 
