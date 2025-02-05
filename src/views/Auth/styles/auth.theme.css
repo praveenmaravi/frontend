@@ -1,0 +1,117 @@
+/* auth.theme.css */
+
+/* Base styles for authentication views */
+
+/* Light Theme */
+:root {
+  --primary-bg-color: #f9fafb;
+  --primary-text-color: #1f2937;
+  --input-bg-color: #ffffff;
+  --input-border-color: #d1d5db;
+  --button-bg-color: #4f46e5;
+  --button-text-color: #ffffff;
+  --link-color: #4f46e5;
+  --error-color: #dc2626;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --primary-bg-color: #1f2937;
+  --primary-text-color: #e5e7eb;
+  --input-bg-color: #374151;
+  --input-border-color: #4b5563;
+  --button-bg-color: #4338ca;
+  --button-text-color: #ffffff;
+  --link-color: #4338ca;
+  --error-color: #f87171;
+}
+
+/* Body */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  transition: all 0.3s ease;
+}
+
+/* Form and Input Styles */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 0.375rem;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--input-bg-color);
+  color: var(--primary-text-color);
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: darken(var(--button-bg-color), 10%);
+}
+
+/* Link Styles */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Error Messages */
+.error-message {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Button Styles for Social Login */
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* Header Styles */
+.auth-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Dark Mode Switch */
+[data-theme="dark"] .social-button {
+  background-color: #1f2937;
+  border: 1px solid #4b5563;
+}
+
+[data-theme="dark"] .auth-header {
+  color: #e5e7eb;
+}
