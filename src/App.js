@@ -9,7 +9,7 @@ import Layout from './components/layout/Layout'; // Layout component
 import DashboardHome from './views/Dashboard/DashboardHome';
 import ChatbotInterface from './views/ChatbotInterface';
 import Settings from './views/Settings';
-import AnalyticsPage from './views/Analytics/AnalyticsPage'; // Updated Analytics import
+import AnalyticsPage from './views/analytics/AnalyticsPage'; // Updated Analytics import
 import Marketplace from './views/Marketplace';
 import ErrorPage from './views/ErrorPage/ErrorPage';
 import Authentication from './views/Auth/Authentication';
