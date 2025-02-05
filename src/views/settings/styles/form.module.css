@@ -1,0 +1,116 @@
+/* form.module.css */
+
+/* General form styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--bg-color, #ffffff);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-text-color, #333333);
+  margin-bottom: 1rem;
+}
+
+.form-description {
+  font-size: 1rem;
+  color: var(--secondary-text-color, #777777);
+  margin-bottom: 1.5rem;
+}
+
+/* Input fields */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--primary-text-color, #333333);
+}
+
+.input-field {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color, #dddddd);
+  border-radius: 6px;
+  background-color: var(--input-bg-color, #f9f9f9);
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: var(--focus-border-color, #4f9dff);
+  outline: none;
+  background-color: var(--input-focus-bg-color, #ffffff);
+}
+
+.input-error {
+  font-size: 0.875rem;
+  color: var(--error-color, #ff4d4f);
+  margin-top: 0.25rem;
+}
+
+/* Buttons */
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: var(--primary-button-color, #4f9dff);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-button-hover-color, #0069d9);
+}
+
+.submit-button:disabled {
+  background-color: var(--button-disabled-color, #cccccc);
+  cursor: not-allowed;
+}
+
+/* Custom input styling (e.g., Select dropdown) */
+.select-dropdown {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color, #dddddd);
+  border-radius: 6px;
+  background-color: var(--input-bg-color, #f9f9f9);
+  transition: border-color 0.3s ease;
+}
+
+.select-dropdown:focus {
+  border-color: var(--focus-border-color, #4f9dff);
+  outline: none;
+  background-color: var(--input-focus-bg-color, #ffffff);
+}
+
+/* Form layout */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1rem;
+  }
+
+  .input-group {
+    gap: 1rem;
+  }
+
+  .form-title {
+    font-size: 1.25rem;
+  }
+
+  .form-description {
+    font-size: 0.875rem;
+  }
+}
