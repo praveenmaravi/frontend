@@ -1,0 +1,57 @@
+/* QuickReplies.css */
+
+/* Wrapper for quick reply buttons */
+.quick-reply-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+/* Styling for each quick reply button */
+.quick-reply-button {
+  background-color: #4CAF50; /* Green background */
+  color: white;              /* White text */
+  border: none;              /* Remove border */
+  border-radius: 25px;       /* Rounded corners */
+  padding: 10px 20px;        /* Add padding */
+  font-size: 16px;           /* Set font size */
+  cursor: pointer;          /* Cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Hover effect */
+.quick-reply-button:hover {
+  background-color: #45a049; /* Slightly darker green */
+  transform: scale(1.05);     /* Slight scale on hover */
+}
+
+/* Active (clicked) effect */
+.quick-reply-button:active {
+  background-color: #388e3c; /* Even darker green */
+  transform: scale(1);        /* Reset scale */
+}
+
+/* Disabled button state */
+.quick-reply-button:disabled {
+  background-color: #c1c1c1; /* Light gray background */
+  color: #7f7f7f;            /* Gray text */
+  cursor: not-allowed;       /* No cursor */
+  box-shadow: none;           /* Remove shadow */
+}
+
+/* Mobile responsiveness: stack buttons in a column */
+@media (max-width: 768px) {
+  .quick-reply-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quick-reply-button {
+    width: 100%;                /* Full width on smaller screens */
+    text-align: center;         /* Center text */
+    margin-bottom: 10px;        /* Add spacing between buttons */
+  }
+}
