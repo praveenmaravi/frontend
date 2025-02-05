@@ -9,6 +9,8 @@ import SentimentAnalysisChart from '../components/SentimentAnalysisChart';
 import FeedbackTable from '../components/FeedbackTable';
 import AnalyticsSidebar from '../components/AnalyticsSidebar';
 import LoadingSpinner from '../components/LoadingSpinner';
+import './analyticsStyles.css';
+
 
 const AnalyticsPage = () => {
   const [loading, setLoading] = useState(true);
