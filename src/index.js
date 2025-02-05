@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './assets/styles/base/index.scss'; // Global styles for the app
-import App from './App'; // Main app component
-import { BrowserRouter as Router } from 'react-router-dom'; // For handling routing
-import { Provider } from 'react-redux'; // For global state management
-import store from './store'; // Redux store (or Vuex if using Vue.js)
-import { ToastContainer } from 'react-toastify'; // Optional: For toast notifications
+
+// Global styles for the app
+import './assets/styles/base/index.scss'; 
+
+// Main app component
+import App from './App'; 
+
+// For handling routing
+import { BrowserRouter as Router } from 'react-router-dom'; 
+
+// For global state management (Redux)
+import { Provider } from 'react-redux'; 
+import store from './store'; // Redux store
+
+// Optional: For toast notifications
+import { ToastContainer } from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css'; // Toast styles
-import * as serviceWorkerRegistration from './serviceWorkerRegistration'; // Service worker for PWA support
+
+// Service worker for PWA support (optional)
+import * as serviceWorkerRegistration from './serviceWorkerRegistration'; 
 
 // Main render function
 ReactDOM.render(
