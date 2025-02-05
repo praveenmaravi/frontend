@@ -1,0 +1,177 @@
+/* analyticsStyles.css */
+
+/* General Styles for Analytics Section */
+.analytics-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Analytics Header */
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.analytics-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.analytics-filter {
+  display: flex;
+  gap: 10px;
+}
+
+/* Analytics Sidebar */
+.analytics-sidebar {
+  width: 250px;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.sidebar-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar-filter label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.sidebar-filter select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* Chart Cards */
+.chart-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.chart-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.chart-card .chart {
+  height: 250px;
+  width: 100%;
+}
+
+.chart-card .chart-description {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Performance Chart Specific */
+.performance-chart .chart {
+  background-color: #f0f4f8;
+}
+
+.performance-chart .chart-description {
+  color: #4caf50; /* Green for positive trends */
+}
+
+/* Sentiment Analysis Chart Specific */
+.sentiment-chart .chart {
+  background-color: #fff3e0;
+}
+
+.sentiment-chart .chart-description {
+  color: #ff9800; /* Orange for sentiment */
+}
+
+/* User Engagement Chart Specific */
+.engagement-chart .chart {
+  background-color: #e3f2fd;
+}
+
+.engagement-chart .chart-description {
+  color: #2196f3; /* Blue for engagement trends */
+}
+
+/* Feedback Table */
+.feedback-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.feedback-table th,
+.feedback-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.feedback-table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.feedback-table td {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loading-spinner img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .analytics-container {
+    padding: 0.5rem;
+  }
+
+  .analytics-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .analytics-sidebar {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .chart-card {
+    margin-bottom: 0.75rem;
+  }
+}
