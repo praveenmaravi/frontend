@@ -10,7 +10,7 @@ import DashboardHome from './views/Dashboard/DashboardHome';
 import ChatbotInterface from './views/ChatbotInterface';
 import Onboarding from './views/Onboarding/Onboarding';  // Import individual components if needed
 import Settings from './views/Settings';
-import Analytics from './views/Analytics';
+import AnalyticsPage from './views/Analytics/AnalyticsPage';  // Updated for correct page
 import Marketplace from './views/Marketplace';
 import ErrorPage from './views/ErrorPage/ErrorPage';
 import Authentication from './views/Auth/Authentication';
@@ -20,6 +20,13 @@ import { loadUserData } from './store/actions/userActions';
 
 // Importing Global Styles
 import './assets/styles/base/_global.scss';
+
+// Onboarding imports
+import FeatureTutorial from './views/Onboarding/FeatureTutorial';
+import IndustrySelection from './views/Onboarding/IndustrySelection';
+import OnboardingComplete from './views/Onboarding/OnboardingComplete';
+import OnboardingSteps from './views/Onboarding/OnboardingSteps';
+import PreferencesSetup from './views/Onboarding/PreferencesSetup';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -46,7 +53,7 @@ const App = () => {
               <Route path="/onboarding/preferences" element={<PreferencesSetup />} />
 
               <Route path="/settings" element={<Settings />} />
-              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/analytics" element={<AnalyticsPage />} />  {/* Updated Analytics Route */}
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/error" element={<ErrorPage />} />
               <Route path="/auth" element={<Authentication />} />
