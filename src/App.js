@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { ProtectedRoute } from './router/guards/ProtectedRoute';  // Route guard
 import { ErrorBoundary } from './components/utils/ErrorBoundary';       // Error boundary
-import Layout from './components/Layout/Layout';                         // Layout component
+import Layout from './components/layout/Layout';                         // Layout component
 
 // Importing Views
 import DashboardHome from './views/Dashboard/DashboardHome';
