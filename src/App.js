@@ -8,7 +8,7 @@ import Layout from './components/layout/Layout'; // Layout component
 // Importing Views (Updated for proper structure and file names)
 import DashboardHome from './views/Dashboard/DashboardHome';
 import ChatbotInterface from './views/ChatbotInterface';
-import { FeatureTutorial, IndustrySelection, OnboardingComplete, OnboardingSteps, PreferencesSetup } from './views/Onboarding';  // Import individual components if needed
+import Onboarding from './views/Onboarding/Onboarding';  // Import individual components if needed
 import Settings from './views/Settings';
 import Analytics from './views/Analytics';
 import Marketplace from './views/Marketplace';
