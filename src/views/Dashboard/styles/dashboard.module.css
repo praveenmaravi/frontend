@@ -1,0 +1,105 @@
+/* dashboard.module.css */
+
+/* Container for the entire dashboard */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Overview section with stats */
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Individual stat cards (OverviewStats, BotStatusCard) */
+.stat-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
+}
+
+/* Title for stats cards */
+.stat-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Grid layout for charts */
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Recent activity section */
+.recent-activity {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+/* User metrics card */
+.user-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Graph and chart styles */
+.chart {
+  width: 100%;
+  height: 300px;
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graph-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Loading and Error States */
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.2rem;
+  color: #999;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+  }
+
+  .overview {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
