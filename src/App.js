@@ -6,7 +6,7 @@ import { ErrorBoundary } from './components/utils/ErrorBoundary';       // Error
 import Layout from './components/Layout/Layout';                         // Layout component
 
 // Importing Views
-import Dashboard from './views/Dashboard/DashboardHome';
+import DashboardHome from './views/Dashboard/DashboardHome';
 import ChatbotInterface from './views/ChatbotInterface';
 import Onboarding from './views/Onboarding';
 import Settings from './views/Settings';
