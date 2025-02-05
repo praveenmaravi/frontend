@@ -21,12 +21,6 @@ import { loadUserData } from './store/actions/userActions';
 // Importing Global Styles
 import './assets/styles/base/_global.scss';
 
-// Onboarding imports
-import FeatureTutorial from './views/Onboarding/FeatureTutorial';
-import IndustrySelection from './views/Onboarding/IndustrySelection';
-import OnboardingComplete from './views/Onboarding/OnboardingComplete';
-import OnboardingSteps from './views/Onboarding/OnboardingSteps';
-import PreferencesSetup from './views/Onboarding/PreferencesSetup';
 
 const App = () => {
   const dispatch = useDispatch();
