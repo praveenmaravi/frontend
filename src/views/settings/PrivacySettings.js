@@ -1,12 +1,12 @@
 // frontend/src/views/settings/PrivacySettings.js
 
 import React, { useState, useEffect } from 'react';
-import { useUserPreferences } from '../../hooks/useUserPreferences';
-import { settingsService } from '../../services/settingsService';
-import SettingsCard from '../../components/SettingsCard';
-import ToggleSwitch from '../../components/ToggleSwitch';
-import InputField from '../../components/InputField';
-import { useNotification } from '../../hooks/useNotification';
+import { useUserPreferences } from './hooks/useUserPreferences';
+import { settingsService } from './services/settingsService';
+import SettingsCard from './components/SettingsCard';
+import ToggleSwitch from './components/ToggleSwitch';
+import InputField from './components/InputField';
+import { useNotification } from './hooks/useNotification';
 
 const PrivacySettings = () => {
   const { userPreferences, updatePreferences } = useUserPreferences();
