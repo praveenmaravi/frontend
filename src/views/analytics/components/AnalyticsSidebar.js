@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setDateRange, setMetricFilter } from '../../store/analyticsSlice'; // Redux actions
+import { setDateRange, setMetricFilter } from '../../../store/analyticsSlice'; // Redux actions
 import { DatePicker } from 'react-datepicker'; // Date picker component (optional)
 import 'react-datepicker/dist/react-datepicker.css';
 
