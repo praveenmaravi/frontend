@@ -1,14 +1,14 @@
 import { SEND_MESSAGE, RECEIVE_MESSAGE, SET_LOADING, SET_ERROR } from "../types";
-import api from "../../services/api";
+import { chatbotService } from "../../services/api"; // Updated import
 
 // Send a message to the chatbot and receive a response
 export const sendMessage = (message) => async (dispatch) => {
     try {
         dispatch({ type: SET_LOADING, payload: true });
 
-        const response = await api.post("/chatbot/send", { message });
+        const response = await chatbotService.sendMessage(message); // Use the chatbotService here
 
-        dispatch({ type: RECEIVE_MESSAGE, payload: response.data });
+        dispatch({ type: RECEIVE_MESSAGE, payload: response });
 
     } catch (error) {
         dispatch({ type: SET_ERROR, payload: error.message });
