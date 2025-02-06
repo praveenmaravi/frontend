@@ -1,5 +1,5 @@
 import { FETCH_MARKETPLACE_ITEMS, INSTALL_INTEGRATION, REMOVE_INTEGRATION } from "../types";
-import api from "../../services/api";
+import { MarketplaceItems } from "../../services/api";
 
 // Fetch available marketplace items
 export const fetchMarketplaceItems = () => async (dispatch) => {
