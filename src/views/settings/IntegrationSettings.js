@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useIntegrationSettings } from '../../hooks/useIntegrationSettings';
-import { integrationService } from '../../services/integrationService';
-import SettingsCard from '../../components/SettingsCard';
-import SelectDropdown from '../../components/SelectDropdown';
-import { Spinner } from '../../components/Spinner'; // Assuming there's a spinner component for loading states
+import { useIntegrationSettings } from './hooks/useIntegrationSettings';
+import { integrationService } from './services/integrationService';
+import SettingsCard from './components/SettingsCard';
+import SelectDropdown from './components/SelectDropdown';
+import { Spinner } from './components/Spinner'; // Assuming there's a spinner component for loading states
 
 const IntegrationSettings = () => {
   const { integrations, loading, error, fetchIntegrations } = useIntegrationSettings();
