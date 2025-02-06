@@ -37,7 +37,8 @@
   "next": "^13.0.0",
   "react-hook-form": "^7.0.0",
   "react-apexcharts": "^1.7.0",
-  "apexcharts": "^4.0.0"
+  "apexcharts": "^4.0.0",
+  "recharts": "^2.1.9"
 },
   "devDependencies": {
     "eslint": "^8.8.0",
