@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';  // Assuming you're using react-toastify for notifications
-import authService from '../../services/authService';
-import ForgotPasswordForm from '../components/ForgotPasswordForm';
-import AuthHeader from '../components/AuthHeader';
+import authService from './services/authService';
+import ForgotPasswordForm from './components/ForgotPasswordForm';
+import AuthHeader from './components/AuthHeader';
 
 const ForgotPasswordPage = () => {
   const [loading, setLoading] = useState(false);
