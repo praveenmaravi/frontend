@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import MessageInput from './MessageInput'; // A reusable component for individual messages
-import { selectMessages } from '../../store/chatbotSlice'; // Redux selector for chatbot messages
+import { selectMessages } from '../../../../store/chatbotSlice'; // Redux selector for chatbot messages
 
 const ChatMessages = () => {
   // Fetch messages from the Redux store
