@@ -1,7 +1,7 @@
 // src/hooks/useAuth.js
 
 import { useState, useEffect, useContext } from 'react';
-import { AuthContext } from '../views/Auth/AuthContext';
+import { AuthContext } from '../AuthContext';
 import { authService } from '../services/authService'; // Assuming your authService handles API calls for login, signup, etc.
 import { useRouter } from 'next/router';
 
