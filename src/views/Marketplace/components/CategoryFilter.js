@@ -1,7 +1,7 @@
 // frontend/src/views/Marketplace/components/CategoryFilter.js
 
 import React, { useState } from 'react';
-import { useCategoryFilter } from '../../hooks/useCategoryFilter'; // Custom hook for handling category filtering
+import { useCategoryFilter } from '../hooks/useCategoryFilter'; // Custom hook for handling category filtering
 
 const CategoryFilter = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
