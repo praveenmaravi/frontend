@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import ResetPasswordForm from '../components/ResetPasswordForm';
-import { useAuth } from '../hooks/useAuth';
-import { resetPassword } from '../services/authService';
+import ResetPasswordForm from './components/ResetPasswordForm';
+import { useAuth } from './hooks/useAuth';
+import { resetPassword } from './services/authService';
 
 const ResetPasswordPage = () => {
   const [loading, setLoading] = useState(false);
