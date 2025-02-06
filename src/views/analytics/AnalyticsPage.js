@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useAnalyticsData } from '../hooks/useAnalyticsData';
-import { usePerformanceData } from '../hooks/usePerformanceData';
-import { useEngagementData } from '../hooks/useEngagementData';
-import { useSentimentData } from '../hooks/useSentimentData';
-import PerformanceChart from '../components/PerformanceChart';
-import UserEngagementChart from '../components/UserEngagementChart';
-import SentimentAnalysisChart from '../components/SentimentAnalysisChart';
-import FeedbackTable from '../components/FeedbackTable';
-import AnalyticsSidebar from '../components/AnalyticsSidebar';
-import LoadingSpinner from '../components/LoadingSpinner';
+import { useAnalyticsData } from './hooks/useAnalyticsData';
+import { usePerformanceData } from './hooks/usePerformanceData';
+import { useEngagementData } from './hooks/useEngagementData';
+import { useSentimentData } from './hooks/useSentimentData';
+import PerformanceChart from './components/PerformanceChart';
+import UserEngagementChart from './components/UserEngagementChart';
+import SentimentAnalysisChart from './components/SentimentAnalysisChart';
+import FeedbackTable from './components/FeedbackTable';
+import AnalyticsSidebar from './components/AnalyticsSidebar';
+import LoadingSpinner from './components/LoadingSpinner';
 import './analyticsStyles.css';
 
 
