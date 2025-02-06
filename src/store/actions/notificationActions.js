@@ -1,5 +1,5 @@
 import { FETCH_NOTIFICATIONS, MARK_AS_READ } from "../types";
-import api from "../../services/api";
+import { notificationService} from "../../services/api";
 
 // Fetch all notifications
 export const fetchNotifications = () => async (dispatch) => {
