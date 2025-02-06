@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { usePasswordToggle } from '../../hooks/usePasswordToggle';
-import { resetPassword } from '../../services/authService';
+import { usePasswordToggle } from '../hooks/usePasswordToggle';
+import { resetPassword } from '../services/authService';
 import { useHistory } from 'react-router-dom';
 
 const ResetPasswordForm = () => {
