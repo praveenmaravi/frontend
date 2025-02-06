@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { addMessage } from '../../store/chatbotSlice'; // Corrected import path
+import { addMessage } from '../../../store/chatbotSlice'; // Corrected import path
 import axios from 'axios';
 
 const useChatbot = () => {
