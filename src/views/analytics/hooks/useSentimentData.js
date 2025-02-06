@@ -1,7 +1,7 @@
 // src/views/analytics/hooks/useSentimentData.js
 
 import { useState, useEffect } from 'react';
-import { sentimentService } from '../../services/sentimentService';
+import { sentimentService } from '../services/sentimentService';
 
 const useSentimentData = (startDate, endDate) => {
   const [sentimentData, setSentimentData] = useState(null);
