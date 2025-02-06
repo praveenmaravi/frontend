@@ -1,7 +1,7 @@
 // src/views/Auth/components/LoginForm.js
 import React, { useState } from 'react';
-import { useAuth } from '../../hooks/useAuth';
-import { useFormValidation } from '../../hooks/useFormValidation';
+import { useAuth } from '../hooks/useAuth';
+import { useFormValidation } from '../hooks/useFormValidation';
 import { useRouter } from 'next/router';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
