@@ -1,14 +1,14 @@
 import { FETCH_ANALYTICS_SUCCESS, FETCH_ANALYTICS_FAIL, SET_ANALYTICS_LOADING } from "../types";
-import api from "../../services/api";
+import { analyticsService } from "../../services/api"; // Import analyticsService
 
 // Fetch chatbot analytics data
 export const fetchAnalytics = () => async (dispatch) => {
     try {
         dispatch({ type: SET_ANALYTICS_LOADING, payload: true });
 
-        const response = await api.get("/analytics");
+        const data = await analyticsService.getAnalyticsData(); // Use the service method
 
-        dispatch({ type: FETCH_ANALYTICS_SUCCESS, payload: response.data });
+        dispatch({ type: FETCH_ANALYTICS_SUCCESS, payload: data });
     } catch (error) {
         dispatch({ type: FETCH_ANALYTICS_FAIL, payload: error.message });
     } finally {
@@ -21,9 +21,9 @@ export const fetchChatbotAnalytics = (chatbotId) => async (dispatch) => {
     try {
         dispatch({ type: SET_ANALYTICS_LOADING, payload: true });
 
-        const response = await api.get(`/analytics/chatbot/${chatbotId}`);
+        const data = await analyticsService.getChatbotAnalytics(chatbotId); // Use the service method
 
-        dispatch({ type: FETCH_ANALYTICS_SUCCESS, payload: response.data });
+        dispatch({ type: FETCH_ANALYTICS_SUCCESS, payload: data });
     } catch (error) {
         dispatch({ type: FETCH_ANALYTICS_FAIL, payload: error.message });
     } finally {
