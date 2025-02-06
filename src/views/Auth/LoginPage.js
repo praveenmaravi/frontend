@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import { useAuth } from "../../hooks/useAuth"; // Custom hook for auth logic
-import { useFormValidation } from "../../hooks/useFormValidation"; // Custom hook for form validation
-import { authService } from "../../services/authService"; // API service for auth
-import LoginForm from "../../components/LoginForm"; // Login form component
-import AuthHeader from "../../components/AuthHeader"; // Auth header for branding
+import { useAuth } from "./hooks/useAuth"; // Custom hook for auth logic
+import { useFormValidation } from "./hooks/useFormValidation"; // Custom hook for form validation
+import { authService } from "./services/authService"; // API service for auth
+import LoginForm from "./components/LoginForm"; // Login form component
+import AuthHeader from "./components/AuthHeader"; // Auth header for branding
 
 const LoginPage = () => {
   const [error, setError] = useState(null); // State for handling login errors
