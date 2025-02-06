@@ -1,8 +1,10 @@
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';  // You can also use other middleware like redux-saga
-import rootReducer from './rootReducer';  // Combines all reducers
+// frontend/src/store/store.js
 
-// Create the Redux store with middleware (redux-thunk for handling async actions)
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';  // Middleware for handling async actions
+import rootReducer from './reducers';  // Import the combined reducers
+
+// Create the Redux store with middleware (redux-thunk for async actions)
 const store = createStore(
   rootReducer,
   applyMiddleware(thunk)  // You can add other middleware here (e.g., redux-saga, redux-logger)
