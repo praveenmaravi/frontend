@@ -21,7 +21,7 @@ import ForgotPasswordPage from './views/Auth/ForgotPasswordPage';
 import ResetPasswordPage from './views/Auth/ResetPasswordPage';
 
 // Importing Store Actions
-import { loadUserData } from './store/actions/userActions';
+import * as actions from './store/actions'; // Import all actions
 
 // Importing Global Styles
 import './assets/styles/base/_global.scss';
@@ -30,7 +30,8 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(loadUserData());
+    // Dispatching an action to load user data when the component mounts
+    dispatch(actions.loadUserData());
   }, [dispatch]);
 
   return (
