@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { sendMessage } from '../../store/chatbotSlice'; // Assuming Redux is used for state management
+import { sendMessage } from '../../../../store/chatbotSlice'; // Assuming Redux is used for state management
 import { FaPaperPlane } from 'react-icons/fa'; // For the send icon
 
 const MessageInput = () => {
