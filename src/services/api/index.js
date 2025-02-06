@@ -6,6 +6,7 @@ import integrationsService from './integrationsService';
 import notificationService from './notificationService';
 import settingsService from './settingsService';
 import userService from './userService';
+import MarketplaceItems from './MarketplaceItems';
 
 // Export all services from a single file for easier imports
 export {
@@ -17,4 +18,5 @@ export {
   notificationService,
   settingsService,
   userService,
+  MarketplaceItems,
 };
