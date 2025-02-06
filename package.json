@@ -35,7 +35,9 @@
     "workbox-strategies": "^6.5.4",
     "workbox-window": "^6.5.4",
     "next": "^13.0.0",
-    "react-hook-form": "^7.0.0"
+    "react-hook-form": "^7.0.0",
+    "react-apexcharts": "^1.4.0",
+    "apexcharts": "^3.32.0"
   },
   "devDependencies": {
     "eslint": "^8.8.0",
