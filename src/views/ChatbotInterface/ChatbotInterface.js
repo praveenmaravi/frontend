@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useChatbot } from '../../hooks/useChatbot';
-import { useEmotionAnalysis } from '../../hooks/useEmotionAnalysis';
-import { useQuickReplies } from '../../hooks/useQuickReplies';
-import ChatWindow from '../../components/ChatWindow/ChatMessages';
-import MessageInput from '../../components/ChatWindow/MessageInput';
-import ChatLoader from '../../components/ChatWindow/ChatLoader';
-import ChatHeader from '../../components/ChatWindow/ChatHeader';
-import QuickReplyButton from '../../components/QuickReplies/QuickReplyButton';
-import EmotionIcon from '../../components/EmotionAnalysis/EmotionIcon';
-import ChatbotAvatar from '../../components/ChatbotAvatar/ChatbotAvatar';
-import NotificationBanner from '../../components/Notifications/NotificationBanner';
-import { sendMessage } from '../../services/chatbotService';
-import { getEmotion } from '../../services/emotionService';
-import { logAnalytics } from '../../services/analyticsService';
+import { useChatbot } from './hooks/useChatbot';
+import { useEmotionAnalysis } from './hooks/useEmotionAnalysis';
+import { useQuickReplies } from './hooks/useQuickReplies';
+import ChatWindow from './components/ChatWindow/ChatMessages';
+import MessageInput from './components/ChatWindow/MessageInput';
+import ChatLoader from './components/ChatWindow/ChatLoader';
+import ChatHeader from './components/ChatWindow/ChatHeader';
+import QuickReplyButton from './components/QuickReplies/QuickReplyButton';
+import EmotionIcon from './components/EmotionAnalysis/EmotionIcon';
+import ChatbotAvatar from './components/ChatbotAvatar/ChatbotAvatar';
+import NotificationBanner from './components/Notifications/NotificationBanner';
+import { sendMessage } from './services/chatbotService';
+import { getEmotion } from './services/emotionService';
+import { logAnalytics } from './services/analyticsService';
 
 const ChatbotInterface = () => {
   const [userMessage, setUserMessage] = useState('');
