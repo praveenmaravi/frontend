@@ -1,9 +1,9 @@
 // frontend/src/views/settings/NotificationSettings.js
 
 import React, { useState, useEffect } from 'react';
-import { useUserPreferences } from '../hooks/useUserPreferences'; // Custom hook to manage user preferences
-import { ToggleSwitch } from '../components/ToggleSwitch'; // Custom toggle switch component
-import { settingsService } from '../services/settingsService'; // Service to handle API calls
+import { useUserPreferences } from './hooks/useUserPreferences'; // Custom hook to manage user preferences
+import { ToggleSwitch } from './components/ToggleSwitch'; // Custom toggle switch component
+import { settingsService } from './services/settingsService'; // Service to handle API calls
 import styles from './styles/settings.module.css'; // Import the CSS for styling
 
 const NotificationSettings = () => {
