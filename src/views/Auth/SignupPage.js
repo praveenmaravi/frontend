@@ -1,12 +1,12 @@
 // src/views/Auth/SignupPage.js
 
 import React, { useState } from 'react';
-import SignupForm from '../components/SignupForm';
+import SignupForm from './components/SignupForm';
 import { useHistory } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth';
-import { useFormValidation } from '../hooks/useFormValidation';
-import { authService } from '../services/authService';
-import AuthHeader from '../components/AuthHeader';
+import { useAuth } from './hooks/useAuth';
+import { useFormValidation } from './hooks/useFormValidation';
+import { authService } from './services/authService';
+import AuthHeader from './components/AuthHeader';
 
 const SignupPage = () => {
   const [error, setError] = useState(null);
