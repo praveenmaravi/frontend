@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ChatbotAvatar.css';
+import './style/ChatbotAvatar.css';
 
 const ChatbotAvatar = ({ avatarUrl, altText }) => {
   return (
