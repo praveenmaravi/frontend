@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useThemeSettings } from '../../hooks/useThemeSettings'; // Custom hook for theme-related settings
-import { ToggleSwitch } from '../../components/ToggleSwitch'; // Custom toggle switch component
+import { useThemeSettings } from './hooks/useThemeSettings'; // Custom hook for theme-related settings
+import { ToggleSwitch } from './components/ToggleSwitch'; // Custom toggle switch component
 import styles from './styles/settings.module.css'; // CSS styles for the settings page
 
 const ThemeSettings = () => {
