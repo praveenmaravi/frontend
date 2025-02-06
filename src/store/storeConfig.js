@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk'; // For handling asynchronous actions
-import rootReducer from './rootReducer';
+import rootReducer from './reducers';
 
 // Middleware setup (you can add other middlewares as necessary)
 const middleware = [thunk];
