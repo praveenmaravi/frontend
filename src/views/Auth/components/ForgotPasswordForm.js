@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
-import { useAuth } from '../../hooks/useAuth';
-import { authService } from '../../services/authService';
+import { useAuth } from '../hooks/useAuth';
+import { authService } from '../services/authService';
 
 const ForgotPasswordForm = () => {
   const [error, setError] = useState(null);
