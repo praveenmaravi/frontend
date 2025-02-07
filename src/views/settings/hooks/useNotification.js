@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setNotifications } from '../../../store/actions/notificationActions';
-import { getAllNotifications } from '../../../../store/selectors/notificationSelectors';
+import { getAllNotifications } from '../../../store/selectors/notificationSelectors';
 
 const useNotification = () => {
   const dispatch = useDispatch();
