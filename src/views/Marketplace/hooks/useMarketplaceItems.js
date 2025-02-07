@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { setMarketplaceItems, setLoading, setError } from '../../../store/marketplaceSlice';
+import { setMarketplaceItems, setLoading, setError } from '../../store/marketplaceSlice';
 import { fetchMarketplaceItems } from '../../../services/api/marketplaceAPI';
 
 /**
