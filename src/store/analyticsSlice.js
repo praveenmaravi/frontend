@@ -1,7 +1,7 @@
 // frontend/src/store/analyticsSlice.js
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchAnalyticsData } from '../services/analyticsService';
+import { fetchAnalyticsData } from '../services/api/analyticsService';
 
 const initialState = {
   data: null,                 // Stores the analytics data
