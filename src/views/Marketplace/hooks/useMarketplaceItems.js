@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setMarketplaceItems, setLoading, setError } from '../../../store/marketplaceSlice';
-import { fetchMarketplaceItems } from '../../../services/api/marketplaceAPI';
+import { fetchMarketplaceItems } from '../../../services/marketplaceAPI';
 
 /**
  * Custom hook to fetch marketplace items and handle pagination, filtering, and sorting.
