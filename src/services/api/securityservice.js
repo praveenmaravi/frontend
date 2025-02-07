@@ -1,4 +1,4 @@
-import apiClient from '../apiClient';  // Import the API client for making requests
+import apiClient from './apiClient';  // Import the API client for making requests
 
 // Define the security service functions
 const securityService = {
